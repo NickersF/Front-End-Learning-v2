@@ -1,0 +1,37 @@
+{
+  "name": "typescriptsandbox",
+  "version": "1.0.0",
+  "description": "Working with TypeScript concepts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run webpack & npm run sass-compile",
+    "webpack": "webpack",
+    "sass-watch": "sass --watch ./src/sass:./dist/css",
+    "sass-compile": "sass ./src/sass:./dist/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickersF/TypeScriptSandbox.git"
+  },
+  "author": "Nicholas Fazzolari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NickersF/TypeScriptSandbox/issues"
+  },
+  "homepage": "https://github.com/NickersF/TypeScriptSandbox#readme",
+  "dependencies": {
+    "@types/jquery": "^3.5.5",
+    "@types/lodash": "^4.14.168",
+    "bootstrap": "^4.6.0",
+    "commonjs": "^0.0.1",
+    "http-server": "^0.12.3",
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21",
+    "node": "^15.12.0",
+    "ts-loader": "^8.1.0",
+    "typescript": "^4.2.3",
+    "webpack": "^5.31.2",
+    "webpack-cli": "^4.6.0"
+  }
+}
