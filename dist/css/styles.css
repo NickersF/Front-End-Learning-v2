@@ -1,3 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap");
+.fe-light-green-text {
+  color: #40D29D;
+}
 
+.fe-light-green-bg {
+  background-color: #40D29D;
+}
+
+.fe-light-blue-text {
+  color: #5DADE2;
+}
+
+.fe-light-blue-bg {
+  background-color: #5DADE2;
+}
+
+.fe-light-yellow-text {
+  color: #F7DC6F;
+}
+
+.fe-light-yellow-bg {
+  background-color: #F7DC6F;
+}
+
+.fe-bluegrey-dark-text {
+  color: #1C2833;
+}
+
+.fe-bluegrey-dark-bg {
+  background-color: #1C2833;
+}
+
+.fe-bluegrey-medium-text {
+  color: #2C3E50;
+}
+
+.fe-bluegrey-medium-bg {
+  background-color: #2C3E50;
+}
+
+.fe-bluegrey-light-text {
+  color: #D6DBDF;
+}
+
+.fe-bluegrey-light-bg {
+  background-color: #D6DBDF;
+}
+
+.fe-bluegrey-lightest-text {
+  color: #EAECEE;
+}
+
+.fe-bluegrey-lightest-bg {
+  background-color: #EAECEE;
+}
+
+.open-sans, .open-sans-extrabold, .open-sans-bold, .open-sans-regular-italic, .open-sans-regular, .open-sans-light {
+  font-family: "Open Sans", sans-serif;
+}
+.open-sans-light {
+  font-weight: 300;
+}
+.open-sans-regular {
+  font-weight: 400;
+}
+.open-sans-regular-italic {
+  font-weight: 400;
+  font-style: italic;
+}
+.open-sans-bold {
+  font-weight: 700;
+}
+.open-sans-extrabold {
+  font-weight: 800;
+}
+
+.poppins, .poppins-black, .poppins-bold, .poppins-regular {
+  font-family: "Poppins", sans-serif;
+}
+.poppins-regular {
+  font-weight: 400;
+}
+.poppins-bold {
+  font-weight: 700;
+}
+.poppins-black {
+  font-weight: 900;
+}
+
+html, body {
+  background-color: #EAECEE;
+  font-family: "Open Sans", sans-serif;
+}
+
+.styleguide-logo-box {
+  width: 96px;
+  height: 96px;
+}
+
+.color-demo-box {
+  width: 64px;
+  height: 64px;
+}
 
 /*# sourceMappingURL=styles.css.map */

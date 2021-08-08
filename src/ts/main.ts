@@ -1,3 +1,2 @@
-import {helloWorld} from "./function";
-console.log("Meow");
+import { helloWorld } from "./function";
 helloWorld();
