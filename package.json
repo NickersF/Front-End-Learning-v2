@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run webpack & npm run sass-compile",
+    "webpack-watch": "webpack --watch --progress",
     "webpack": "webpack",
     "sass-watch": "sass --watch ./src/sass:./dist/css",
     "sass-compile": "sass ./src/sass:./dist/css"

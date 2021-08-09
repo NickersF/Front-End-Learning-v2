@@ -1,3 +1,4 @@
+// Theme palette
 $light_green: #40D29D;
 $light_blue: #5DADE2 ;
 $light_yellow: #F7DC6F;
@@ -6,60 +7,35 @@ $bluegrey_medium: #2C3E50;
 $bluegrey_light: #D6DBDF;
 $bluegrey_lightest: #EAECEE;
 
-.fe-light-green-text {
-    color: $light_green;
+// Seed colors
+$base_red: #641E16;
+
+$color-names-map: (
+    "light-green": $light_green,
+    "light-blue": $light_blue,
+    "light-yellow": $light_yellow,
+    "bluegray-dark": $bluegrey_dark,
+    "bluegrey-medium": $bluegrey_medium,
+    "bluegrey-light": $bluegrey_light,
+    "bluegrey-lightest": $bluegrey_lightest
+);
+
+@each $color-name, $color-value in $color-names-map {
+    .fe-#{$color-name}-bg {
+        background-color: $color-value;
+    }
 }
 
-.fe-light-green-bg {
-    background-color: $light_green;
+@each $color-name, $color-value in $color-names-map {
+    .fe-#{$color-name}-text {
+        color: $color-value;
+    }
 }
 
-.fe-light-blue-text {
-    color: $light_blue;
-}
-
-.fe-light-blue-bg {
-    background-color: $light_blue;
-}
-
-.fe-light-yellow-text {
-    color: $light_yellow;
-}
-
-.fe-light-yellow-bg {
-    background-color: $light_yellow;
-}
-
-.fe-bluegrey-dark-text {
-    color: $bluegrey_dark;
-}
-
-.fe-bluegrey-dark-bg {
-    background-color: $bluegrey_dark;
-}
-
-.fe-bluegrey-medium-text {
-    color: $bluegrey_medium;
-}
-
-.fe-bluegrey-medium-bg {
-    background-color: $bluegrey_medium;
-}
-
-.fe-bluegrey-light-text {
-    color: $bluegrey_light;
-}
-
-.fe-bluegrey-light-bg {
-    background-color: $bluegrey_light;
-}
-
-.fe-bluegrey-lightest-text {
-    color: $bluegrey_lightest;
-}
-
-.fe-bluegrey-lightest-bg {
-    background-color: $bluegrey_lightest;
+@for $step from 0 to 10 {
+    .fe-red-0#{$step} {
+        background-color: lighten($base_red, $step * 8%);
+    }
 }
 
 // rgb(247, 220, 111)

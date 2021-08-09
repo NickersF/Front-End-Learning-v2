@@ -3,6 +3,7 @@ var path = require('path');
 module.exports = {
     context: path.resolve(__dirname, './src/ts'),
     mode: 'development',
+    watch: true,
     entry: {
         main: './main.ts'
     },

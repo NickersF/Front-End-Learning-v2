@@ -1,0 +1,22 @@
+@mixin set-margins($name, $left : 0, $top: 0, $right: 0, $bottom: 0) {
+    .elment-margin-#{$name} {
+        margin-left: $left;
+        margin-top: $top;
+        margin-right: $right;
+        margin-bottom: $bottom;
+    }
+}
+
+@mixin set-paddings($name, $left : 0, $top: 0, $right: 0, $bottom: 0) {
+    .elment-padding-#{$name} {
+        padding-left: $left;
+        padding-top: $top;
+        padding-right: $right;
+        padding-bottom: $bottom;
+    }
+}
+
+@include set-margins("main-top", 0, 4rem);
+@include set-margins("section-heading", 0, 4rem, 0, 2rem);
+
+@include set-paddings("main-left", 8rem);

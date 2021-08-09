@@ -1,2 +1,3 @@
-import { helloWorld } from "./function";
-helloWorld();
+import { styleGuideSetup } from "./styleguide";
+
+styleGuideSetup();
