@@ -166,4 +166,15 @@ html, body {
   height: 64px;
 }
 
+.move-me {
+  position: relative;
+  background-color: firebrick;
+}
+
+.position-container-box {
+  overflow: hidden;
+  width: 256px;
+  background-color: lightpink;
+}
+
 /*# sourceMappingURL=styles.css.map */
