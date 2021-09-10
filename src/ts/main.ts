@@ -1,5 +1,6 @@
 import { styleGuideSetup } from "./styleguide";
-import { EchoSlider } from "./overflow_position";
+import { EchoSlider, ScrollEventExample } from "./overflow_position";
 
 EchoSlider();
+ScrollEventExample();
 styleGuideSetup();
