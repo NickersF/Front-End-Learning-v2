@@ -1,5 +1,9 @@
+declare var CONVO_EDITOR: Boolean;
+
 export class ConversationEditor {
     main() {
-        console.log("ConversationSystem instance.");
+        
+
+        console.log("ConversationEditor instance.");
     }
 }

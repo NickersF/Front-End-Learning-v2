@@ -42,7 +42,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ConversationEditor = void 0;
 class ConversationEditor {
     main() {
-        console.log("ConversationSystem instance.");
+        console.log("ConversationEditor instance.");
     }
 }
 exports.ConversationEditor = ConversationEditor;
@@ -221,7 +221,6 @@ const styleguide_1 = __webpack_require__(/*! ./styleguide */ "./styleguide.ts");
 const overflow_position_1 = __webpack_require__(/*! ./overflow_position */ "./overflow_position.ts");
 const function_1 = __webpack_require__(/*! ./function */ "./function.ts");
 const conversation_editor_1 = __webpack_require__(/*! ./conversation_editor/conversation_editor */ "./conversation_editor/conversation_editor.ts");
-console.log($(document));
 styleguide_1.styleGuideSetup();
 overflow_position_1.EchoSlider();
 overflow_position_1.ScrollEventExample();
