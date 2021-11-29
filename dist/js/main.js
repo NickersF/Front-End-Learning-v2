@@ -31,42 +31,6 @@ exports.buildBackgroundColorElements = buildBackgroundColorElements;
 
 /***/ }),
 
-/***/ "./conversation_editor/conversation_editor.ts":
-/*!****************************************************!*\
-  !*** ./conversation_editor/conversation_editor.ts ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.ConversationEditor = void 0;
-class ConversationEditor {
-    main() {
-        console.log("ConversationEditor instance.");
-    }
-}
-exports.ConversationEditor = ConversationEditor;
-
-
-/***/ }),
-
-/***/ "./function.ts":
-/*!*********************!*\
-  !*** ./function.ts ***!
-  \*********************/
-/***/ ((__unused_webpack_module, exports) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.moduleTestFunc = void 0;
-function moduleTestFunc() {
-    console.log("Webpack allowed this to be loaded via a module.");
-}
-exports.moduleTestFunc = moduleTestFunc;
-
-
-/***/ }),
-
 /***/ "./overflow_position.ts":
 /*!******************************!*\
   !*** ./overflow_position.ts ***!
@@ -119,6 +83,38 @@ function DragEventExample() {
     });
 }
 exports.DragEventExample = DragEventExample;
+
+
+/***/ }),
+
+/***/ "./selectinput.ts":
+/*!************************!*\
+  !*** ./selectinput.ts ***!
+  \************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.SelectInputFn = void 0;
+function SelectInputFn() {
+    $(function () {
+        let selectItemsData = {
+            "1": "Red",
+            "2": "Green",
+            "3": "Blue",
+            "4": "Alpha"
+        };
+        $.each(selectItemsData, function (key, value) {
+            let optionsElString = "<option value='" + key + "'>" + value + "</option>";
+            $("#SelectColorInput").append(optionsElString);
+        });
+        for (const key in selectItemsData) {
+            let optionsElString = "<option value='" + key + "'>" + selectItemsData[key] + "</option>";
+            $("#SelectColorInput").append(optionsElString);
+        }
+    });
+}
+exports.SelectInputFn = SelectInputFn;
 
 
 /***/ }),
@@ -219,14 +215,11 @@ var exports = __webpack_exports__;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const styleguide_1 = __webpack_require__(/*! ./styleguide */ "./styleguide.ts");
 const overflow_position_1 = __webpack_require__(/*! ./overflow_position */ "./overflow_position.ts");
-const function_1 = __webpack_require__(/*! ./function */ "./function.ts");
-const conversation_editor_1 = __webpack_require__(/*! ./conversation_editor/conversation_editor */ "./conversation_editor/conversation_editor.ts");
+const selectinput_1 = __webpack_require__(/*! ./selectinput */ "./selectinput.ts");
 styleguide_1.styleGuideSetup();
 overflow_position_1.EchoSlider();
 overflow_position_1.ScrollEventExample();
-function_1.moduleTestFunc();
-let conversationEditorInstance = new conversation_editor_1.ConversationEditor();
-conversationEditorInstance.main();
+selectinput_1.SelectInputFn();
 
 })();
 
