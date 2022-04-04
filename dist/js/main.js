@@ -175,6 +175,27 @@ function buildTypeExampleElements(fontWeightValues, parentEl, exText, targetFont
 exports.buildTypeExampleElements = buildTypeExampleElements;
 
 
+/***/ }),
+
+/***/ "./user.ts":
+/*!*****************!*\
+  !*** ./user.ts ***!
+  \*****************/
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.User = void 0;
+class User {
+    addElement(rootEl) {
+        let userRoot = document.querySelector("#" + rootEl);
+        userRoot.append(this.email);
+        console.log(userRoot);
+    }
+}
+exports.User = User;
+
+
 /***/ })
 
 /******/ 	});
@@ -216,10 +237,14 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const styleguide_1 = __webpack_require__(/*! ./styleguide */ "./styleguide.ts");
 const overflow_position_1 = __webpack_require__(/*! ./overflow_position */ "./overflow_position.ts");
 const selectinput_1 = __webpack_require__(/*! ./selectinput */ "./selectinput.ts");
+const user_1 = __webpack_require__(/*! ./user */ "./user.ts");
 styleguide_1.styleGuideSetup();
 overflow_position_1.EchoSlider();
 overflow_position_1.ScrollEventExample();
 selectinput_1.SelectInputFn();
+let aUser = new user_1.User();
+aUser.userName = "loler20102";
+aUser.email = "name@domain.com";
 
 })();
 
