@@ -1,4 +1,4 @@
-import { generateStepNames, buildBackgroundColorElements } from "./color_gen";
+import { generateStepNames, buildBackgroundColorElements } from "./visual_programming/color_gen";
 
 const siteColorPalette = [
     "light-green",
