@@ -2,39 +2,42 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./color_gen.ts":
-/*!**********************!*\
-  !*** ./color_gen.ts ***!
-  \**********************/
+/***/ "./form_and_input/selectinput.ts":
+/*!***************************************!*\
+  !*** ./form_and_input/selectinput.ts ***!
+  \***************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.buildBackgroundColorElements = exports.generateStepNames = void 0;
-function generateStepNames(colorNamesArray, numOfSteps, baseColor) {
-    if (numOfSteps < 0 || numOfSteps > 10) {
-        return console.log("Invalid color step range provided.");
-    }
-    for (let index = 0; index < numOfSteps; index++) {
-        colorNamesArray.push("fe-" + baseColor + "-0" + index.toString());
-    }
+exports.SelectInputFn = void 0;
+function SelectInputFn() {
+    $(function () {
+        let selectItemsData = {
+            "1": "Red",
+            "2": "Green",
+            "3": "Blue",
+            "4": "Alpha"
+        };
+        $.each(selectItemsData, function (key, value) {
+            let optionsElString = "<option value='" + key + "'>" + value + "</option>";
+            $("#SelectColorInput").append(optionsElString);
+        });
+        for (const key in selectItemsData) {
+            let optionsElString = "<option value='" + key + "'>" + selectItemsData[key] + "</option>";
+            $("#SelectColorInput").append(optionsElString);
+        }
+    });
 }
-exports.generateStepNames = generateStepNames;
-function buildBackgroundColorElements(colorNamesArray, parentEl) {
-    for (let index = 0; index < colorNamesArray.length; index++) {
-        let $colorEls = $("<div class='color-demo-box fe-" + colorNamesArray[index] + "-bg'></div>");
-        $("#" + parentEl).append($colorEls);
-    }
-}
-exports.buildBackgroundColorElements = buildBackgroundColorElements;
+exports.SelectInputFn = SelectInputFn;
 
 
 /***/ }),
 
-/***/ "./overflow_position.ts":
-/*!******************************!*\
-  !*** ./overflow_position.ts ***!
-  \******************************/
+/***/ "./layout/overflow_position.ts":
+/*!*************************************!*\
+  !*** ./layout/overflow_position.ts ***!
+  \*************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -87,38 +90,6 @@ exports.DragEventExample = DragEventExample;
 
 /***/ }),
 
-/***/ "./selectinput.ts":
-/*!************************!*\
-  !*** ./selectinput.ts ***!
-  \************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.SelectInputFn = void 0;
-function SelectInputFn() {
-    $(function () {
-        let selectItemsData = {
-            "1": "Red",
-            "2": "Green",
-            "3": "Blue",
-            "4": "Alpha"
-        };
-        $.each(selectItemsData, function (key, value) {
-            let optionsElString = "<option value='" + key + "'>" + value + "</option>";
-            $("#SelectColorInput").append(optionsElString);
-        });
-        for (const key in selectItemsData) {
-            let optionsElString = "<option value='" + key + "'>" + selectItemsData[key] + "</option>";
-            $("#SelectColorInput").append(optionsElString);
-        }
-    });
-}
-exports.SelectInputFn = SelectInputFn;
-
-
-/***/ }),
-
 /***/ "./styleguide.ts":
 /*!***********************!*\
   !*** ./styleguide.ts ***!
@@ -128,7 +99,7 @@ exports.SelectInputFn = SelectInputFn;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.buildTypeExampleElements = exports.styleGuideSetup = void 0;
-const color_gen_1 = __webpack_require__(/*! ./color_gen */ "./color_gen.ts");
+const color_gen_1 = __webpack_require__(/*! ./visual_programming/color_gen */ "./visual_programming/color_gen.ts");
 const siteColorPalette = [
     "light-green",
     "light-blue",
@@ -177,10 +148,10 @@ exports.buildTypeExampleElements = buildTypeExampleElements;
 
 /***/ }),
 
-/***/ "./user.ts":
-/*!*****************!*\
-  !*** ./user.ts ***!
-  \*****************/
+/***/ "./ts_learning/user.ts":
+/*!*****************************!*\
+  !*** ./ts_learning/user.ts ***!
+  \*****************************/
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -194,6 +165,35 @@ class User {
     }
 }
 exports.User = User;
+
+
+/***/ }),
+
+/***/ "./visual_programming/color_gen.ts":
+/*!*****************************************!*\
+  !*** ./visual_programming/color_gen.ts ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.buildBackgroundColorElements = exports.generateStepNames = void 0;
+function generateStepNames(colorNamesArray, numOfSteps, baseColor) {
+    if (numOfSteps < 0 || numOfSteps > 10) {
+        return console.log("Invalid color step range provided.");
+    }
+    for (let index = 0; index < numOfSteps; index++) {
+        colorNamesArray.push("fe-" + baseColor + "-0" + index.toString());
+    }
+}
+exports.generateStepNames = generateStepNames;
+function buildBackgroundColorElements(colorNamesArray, parentEl) {
+    for (let index = 0; index < colorNamesArray.length; index++) {
+        let $colorEls = $("<div class='color-demo-box fe-" + colorNamesArray[index] + "-bg'></div>");
+        $("#" + parentEl).append($colorEls);
+    }
+}
+exports.buildBackgroundColorElements = buildBackgroundColorElements;
 
 
 /***/ })
@@ -235,9 +235,9 @@ var exports = __webpack_exports__;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const styleguide_1 = __webpack_require__(/*! ./styleguide */ "./styleguide.ts");
-const overflow_position_1 = __webpack_require__(/*! ./overflow_position */ "./overflow_position.ts");
-const selectinput_1 = __webpack_require__(/*! ./selectinput */ "./selectinput.ts");
-const user_1 = __webpack_require__(/*! ./user */ "./user.ts");
+const overflow_position_1 = __webpack_require__(/*! ./layout/overflow_position */ "./layout/overflow_position.ts");
+const selectinput_1 = __webpack_require__(/*! ./form_and_input/selectinput */ "./form_and_input/selectinput.ts");
+const user_1 = __webpack_require__(/*! ./ts_learning/user */ "./ts_learning/user.ts");
 styleguide_1.styleGuideSetup();
 overflow_position_1.EchoSlider();
 overflow_position_1.ScrollEventExample();
