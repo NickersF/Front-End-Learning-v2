@@ -148,27 +148,6 @@ exports.buildTypeExampleElements = buildTypeExampleElements;
 
 /***/ }),
 
-/***/ "./ts_learning/user.ts":
-/*!*****************************!*\
-  !*** ./ts_learning/user.ts ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.User = void 0;
-class User {
-    addElement(rootEl) {
-        let userRoot = document.querySelector("#" + rootEl);
-        userRoot.append(this.email);
-        console.log(userRoot);
-    }
-}
-exports.User = User;
-
-
-/***/ }),
-
 /***/ "./visual_programming/color_gen.ts":
 /*!*****************************************!*\
   !*** ./visual_programming/color_gen.ts ***!
@@ -237,14 +216,10 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const styleguide_1 = __webpack_require__(/*! ./styleguide */ "./styleguide.ts");
 const overflow_position_1 = __webpack_require__(/*! ./layout/overflow_position */ "./layout/overflow_position.ts");
 const selectinput_1 = __webpack_require__(/*! ./form_and_input/selectinput */ "./form_and_input/selectinput.ts");
-const user_1 = __webpack_require__(/*! ./ts_learning/user */ "./ts_learning/user.ts");
 styleguide_1.styleGuideSetup();
 overflow_position_1.EchoSlider();
 overflow_position_1.ScrollEventExample();
 selectinput_1.SelectInputFn();
-let aUser = new user_1.User();
-aUser.userName = "loler20102";
-aUser.email = "name@domain.com";
 
 })();
 

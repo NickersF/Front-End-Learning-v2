@@ -7,11 +7,3 @@ styleGuideSetup();
 EchoSlider();
 ScrollEventExample();
 SelectInputFn();
-
-let aUser = new User();
-
-aUser.userName = "loler20102";
-aUser.email = "name@domain.com";
-//aUser.addElement("userRoot");
-
-// drag and drop learning
