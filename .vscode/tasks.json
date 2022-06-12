@@ -3,11 +3,35 @@
 	"tasks": [
 		{
 			"type": "npm",
+			"script": "webpack-compile",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: webpack-compile",
+			"detail": "webpack --config webpack.config.js"
+		},
+		{
+			"type": "npm",
 			"script": "webpack-watch",
 			"group": "build",
 			"problemMatcher": [],
 			"label": "npm: webpack-watch",
 			"detail": "webpack --watch --progress --config webpack.config.js"
+		},
+		{
+			"type": "npm",
+			"script": "sass-compile",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: sass-compile",
+			"detail": "sass ./src/sass:./dist/css"
+		},
+		{
+			"type": "npm",
+			"script": "sass-watch",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: sass-watch",
+			"detail": "sass --watch ./src/sass:./dist/css"
 		}
 	]
 }

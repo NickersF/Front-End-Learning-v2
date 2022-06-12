@@ -88,93 +88,6 @@ function DragEventExample() {
 exports.DragEventExample = DragEventExample;
 
 
-/***/ }),
-
-/***/ "./styleguide.ts":
-/*!***********************!*\
-  !*** ./styleguide.ts ***!
-  \***********************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.buildTypeExampleElements = exports.styleGuideSetup = void 0;
-const color_gen_1 = __webpack_require__(/*! ./visual_programming/color_gen */ "./visual_programming/color_gen.ts");
-const siteColorPalette = [
-    "light-green",
-    "light-blue",
-    "light-yellow",
-    "bluegray-dark",
-    "bluegrey-medium",
-    "bluegrey-light",
-    "bluegrey-lightest",
-];
-const openSansFontWeightValues = [
-    "light",
-    "regular-italic",
-    "regular",
-    "bold",
-    "extrabold"
-];
-const poppinsFontWeightValues = [
-    "regular",
-    "bold",
-    "black"
-];
-function styleGuideSetup() {
-    color_gen_1.buildBackgroundColorElements(siteColorPalette, "ColorPaletteWrapper");
-    buildTypeExampleElements(openSansFontWeightValues, "TypeExampleWrapper", "Open Sans Sample", "open-sans");
-    buildTypeExampleElements(poppinsFontWeightValues, "TypeExampleWrapper", "Poppins Sample", "poppins");
-}
-exports.styleGuideSetup = styleGuideSetup;
-function buildTypeExampleElements(fontWeightValues, parentEl, exText, targetFontFamily) {
-    if (targetFontFamily == "open-sans") {
-        for (let index = 0; index < fontWeightValues.length; index++) {
-            let $typeExEls = $("<div class='" + targetFontFamily + "-" + fontWeightValues[index] + "'></div>");
-            $typeExEls.text(exText);
-            $("#" + parentEl).append($typeExEls);
-        }
-    }
-    if (targetFontFamily == "poppins") {
-        for (let index = 0; index < fontWeightValues.length; index++) {
-            let $typeExEls = $("<div class='" + targetFontFamily + "-" + fontWeightValues[index] + "'></div>");
-            $typeExEls.text(exText);
-            $("#" + parentEl).append($typeExEls);
-        }
-    }
-}
-exports.buildTypeExampleElements = buildTypeExampleElements;
-
-
-/***/ }),
-
-/***/ "./visual_programming/color_gen.ts":
-/*!*****************************************!*\
-  !*** ./visual_programming/color_gen.ts ***!
-  \*****************************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.buildBackgroundColorElements = exports.generateStepNames = void 0;
-function generateStepNames(colorNamesArray, numOfSteps, baseColor) {
-    if (numOfSteps < 0 || numOfSteps > 10) {
-        return console.log("Invalid color step range provided.");
-    }
-    for (let index = 0; index < numOfSteps; index++) {
-        colorNamesArray.push("fe-" + baseColor + "-0" + index.toString());
-    }
-}
-exports.generateStepNames = generateStepNames;
-function buildBackgroundColorElements(colorNamesArray, parentEl) {
-    for (let index = 0; index < colorNamesArray.length; index++) {
-        let $colorEls = $("<div class='color-demo-box fe-" + colorNamesArray[index] + "-bg'></div>");
-        $("#" + parentEl).append($colorEls);
-    }
-}
-exports.buildBackgroundColorElements = buildBackgroundColorElements;
-
-
 /***/ })
 
 /******/ 	});
@@ -213,10 +126,8 @@ var exports = __webpack_exports__;
   \*****************/
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const styleguide_1 = __webpack_require__(/*! ./styleguide */ "./styleguide.ts");
 const overflow_position_1 = __webpack_require__(/*! ./layout/overflow_position */ "./layout/overflow_position.ts");
 const selectinput_1 = __webpack_require__(/*! ./form_and_input/selectinput */ "./form_and_input/selectinput.ts");
-styleguide_1.styleGuideSetup();
 overflow_position_1.EchoSlider();
 overflow_position_1.ScrollEventExample();
 selectinput_1.SelectInputFn();
