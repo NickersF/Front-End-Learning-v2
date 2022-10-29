@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./form_and_input/selectinput.ts":
@@ -8,6 +7,7 @@
   \***************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SelectInputFn = void 0;
@@ -40,6 +40,7 @@ exports.SelectInputFn = SelectInputFn;
   \*************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.DragEventExample = exports.ScrollEventExample = exports.EchoSlider = void 0;
@@ -88,6 +89,16 @@ function DragEventExample() {
 exports.DragEventExample = DragEventExample;
 
 
+/***/ }),
+
+/***/ "?c221":
+/*!********************!*\
+  !*** fs (ignored) ***!
+  \********************/
+/***/ (() => {
+
+/* (ignored) */
+
 /***/ })
 
 /******/ 	});
@@ -118,8 +129,9 @@ exports.DragEventExample = DragEventExample;
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 var exports = __webpack_exports__;
 /*!*****************!*\
   !*** ./main.ts ***!
@@ -128,9 +140,19 @@ var exports = __webpack_exports__;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const overflow_position_1 = __webpack_require__(/*! ./layout/overflow_position */ "./layout/overflow_position.ts");
 const selectinput_1 = __webpack_require__(/*! ./form_and_input/selectinput */ "./form_and_input/selectinput.ts");
+const fs = __webpack_require__(/*! fs */ "?c221");
 overflow_position_1.EchoSlider();
 overflow_position_1.ScrollEventExample();
 selectinput_1.SelectInputFn();
+const dir = "./";
+fs.readdir(dir, (err, files) => {
+    if (err) {
+        throw err;
+    }
+    files.forEach(file => {
+        console.log(file);
+    });
+});
 
 })();
 
