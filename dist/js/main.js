@@ -2,6 +2,25 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./debug_test.ts":
+/*!***********************!*\
+  !*** ./debug_test.ts ***!
+  \***********************/
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.debugTest = void 0;
+function debugTest(a, b) {
+    let sum = a + b;
+    let productOfSum = sum * 2;
+    return productOfSum;
+}
+exports.debugTest = debugTest;
+
+
+/***/ }),
+
 /***/ "./form_and_input/selectinput.ts":
 /*!***************************************!*\
   !*** ./form_and_input/selectinput.ts ***!
@@ -128,10 +147,14 @@ var exports = __webpack_exports__;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const overflow_position_1 = __webpack_require__(/*! ./layout/overflow_position */ "./layout/overflow_position.ts");
 const selectinput_1 = __webpack_require__(/*! ./form_and_input/selectinput */ "./form_and_input/selectinput.ts");
+const debug_test_1 = __webpack_require__(/*! ./debug_test */ "./debug_test.ts");
 overflow_position_1.EchoSlider();
 overflow_position_1.ScrollEventExample();
 selectinput_1.SelectInputFn();
-const dir = "./";
+$("#DebugTest_Btn").on("click", () => {
+    let debugResult = debug_test_1.debugTest(2, 3);
+    console.log(debugResult);
+});
 
 })();
 
