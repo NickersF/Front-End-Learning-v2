@@ -7,7 +7,14 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
+            "name": "Chrome Debug",
+            "url": "http://localhost:8080/dist",
+            "webRoot": "${workspaceFolder}/src/ts",
+        },
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Edge Debug",
             "url": "http://localhost:8080/dist",
             "webRoot": "${workspaceFolder}/src/ts",
         }
