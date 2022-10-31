@@ -21,38 +21,6 @@ exports.debugTest = debugTest;
 
 /***/ }),
 
-/***/ "./form_and_input/selectinput.ts":
-/*!***************************************!*\
-  !*** ./form_and_input/selectinput.ts ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.SelectInputFn = void 0;
-function SelectInputFn() {
-    $(function () {
-        let selectItemsData = {
-            "1": "Red",
-            "2": "Green",
-            "3": "Blue",
-            "4": "Alpha"
-        };
-        $.each(selectItemsData, function (key, value) {
-            let optionsElString = "<option value='" + key + "'>" + value + "</option>";
-            $("#SelectColorInput").append(optionsElString);
-        });
-        for (const key in selectItemsData) {
-            let optionsElString = "<option value='" + key + "'>" + selectItemsData[key] + "</option>";
-            $("#SelectColorInput").append(optionsElString);
-        }
-    });
-}
-exports.SelectInputFn = SelectInputFn;
-
-
-/***/ }),
-
 /***/ "./layout/overflow_position.ts":
 /*!*************************************!*\
   !*** ./layout/overflow_position.ts ***!
@@ -146,11 +114,9 @@ var exports = __webpack_exports__;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const overflow_position_1 = __webpack_require__(/*! ./layout/overflow_position */ "./layout/overflow_position.ts");
-const selectinput_1 = __webpack_require__(/*! ./form_and_input/selectinput */ "./form_and_input/selectinput.ts");
 const debug_test_1 = __webpack_require__(/*! ./debug_test */ "./debug_test.ts");
 overflow_position_1.EchoSlider();
 overflow_position_1.ScrollEventExample();
-selectinput_1.SelectInputFn();
 $("#DebugTest_Btn").on("click", () => {
     let debugResult = debug_test_1.debugTest(2, 3);
     console.log(debugResult);
