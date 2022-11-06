@@ -75,6 +75,26 @@ function DragEventExample() {
 exports.DragEventExample = DragEventExample;
 
 
+/***/ }),
+
+/***/ "./todo/todo.ts":
+/*!**********************!*\
+  !*** ./todo/todo.ts ***!
+  \**********************/
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+class Todo {
+    testTodo() {
+        console.log("Echo from TODO class instance.");
+    }
+}
+exports["default"] = Todo;
+let aTodo = new Todo();
+aTodo.testTodo();
+
+
 /***/ })
 
 /******/ 	});
@@ -115,8 +135,11 @@ var exports = __webpack_exports__;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const overflow_position_1 = __webpack_require__(/*! ./layout/overflow_position */ "./layout/overflow_position.ts");
 const debug_test_1 = __webpack_require__(/*! ./debug_test */ "./debug_test.ts");
+const todo_1 = __webpack_require__(/*! ./todo/todo */ "./todo/todo.ts");
 overflow_position_1.EchoSlider();
 overflow_position_1.ScrollEventExample();
+let todo = new todo_1.default();
+todo.testTodo();
 $("#DebugTest_Btn").on("click", () => {
     let debugResult = debug_test_1.debugTest(2, 3);
     console.log(debugResult);
