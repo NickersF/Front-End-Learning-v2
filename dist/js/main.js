@@ -91,8 +91,6 @@ class Todo {
     }
 }
 exports["default"] = Todo;
-let aTodo = new Todo();
-aTodo.testTodo();
 
 
 /***/ })
@@ -144,6 +142,7 @@ $("#DebugTest_Btn").on("click", () => {
     let debugResult = debug_test_1.debugTest(2, 3);
     console.log(debugResult);
 });
+console.log(document.URL);
 
 })();
 
