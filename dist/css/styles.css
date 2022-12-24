@@ -129,10 +129,6 @@
   font-weight: 900;
 }
 
-.icon-sizer-lg {
-  font-size: 2em;
-}
-
 .elment-margin-main-top {
   margin-left: 0;
   margin-top: 4rem;
@@ -154,6 +150,10 @@
   padding-bottom: 0;
 }
 
+.icon-sizer-lg {
+  font-size: 2em;
+}
+
 html, body {
   background-color: #EAECEE;
   color: #2C3E50;
@@ -168,23 +168,6 @@ html, body {
 .color-demo-box {
   width: 64px;
   height: 64px;
-}
-
-.move-me {
-  position: relative;
-  background-color: firebrick;
-  color: wheat;
-}
-
-.position-container-box {
-  overflow: hidden;
-  width: 256px;
-  height: 64px;
-  background-color: lightpink;
-}
-
-#PositionRange {
-  width: 256px;
 }
 
 /*# sourceMappingURL=styles.css.map */
