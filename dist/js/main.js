@@ -40,16 +40,23 @@ class Page1 {
         }
         return this._instance;
     }
-    testFn() {
-        console.log("Page 1 controller loaded.");
-        console.log(document.URL);
+    setup() {
+        this.page1Click();
+    }
+    page1Click() {
+        const buttonEl = document.getElementById("Page1_Btn");
+        console.dir(buttonEl);
+        buttonEl.addEventListener("click", (e) => {
+            console.log(e);
+            console.log(e.currentTarget);
+        });
     }
 }
 exports["default"] = Page1;
 jQuery(() => {
     try {
         if (PAGE_1) {
-            Page1.getInstance().testFn();
+            Page1.getInstance().setup();
         }
     }
     catch (error) {
@@ -91,22 +98,25 @@ __exportStar(__webpack_require__(/*! ./page2 */ "./page2.ts"), exports);
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 class Page2 {
+    constructor() {
+        this.testString = "";
+    }
     static getInstance() {
         if (!this._instance) {
             this._instance = new Page2();
         }
         return this._instance;
     }
-    testFn() {
-        console.log("Page 2 controller loaded.");
-        console.log(document.URL);
+    setup() {
+        console.log("Page 2 loaded.");
+        console.log(this);
     }
 }
 exports["default"] = Page2;
 jQuery(() => {
     try {
         if (PAGE_2) {
-            Page2.getInstance().testFn();
+            Page2.getInstance().setup();
         }
     }
     catch (error) {
