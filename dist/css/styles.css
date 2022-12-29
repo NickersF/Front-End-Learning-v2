@@ -96,6 +96,10 @@
   background-color: #fbefee;
 }
 
+html {
+  font-size: 14px;
+}
+
 .open-sans, .open-sans-extrabold, .open-sans-bold, .open-sans-regular-italic, .open-sans-regular, .open-sans-light {
   font-family: "Open Sans", sans-serif;
 }
@@ -127,6 +131,10 @@
 }
 .poppins-black {
   font-weight: 900;
+}
+
+html, body {
+  height: 100%;
 }
 
 .elment-margin-main-top {
