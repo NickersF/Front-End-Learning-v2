@@ -1,11 +1,62 @@
-// Theme palette
-$light_green: #40D29D;
-$light_blue: #5DADE2 ;
-$light_yellow: #F7DC6F;
-$bluegrey_dark: #1C2833;
-$bluegrey_medium: #2C3E50;
-$bluegrey_light: #D6DBDF;
-$bluegrey_lightest: #EAECEE;
+// Darkslategray
+$darkslategray-01: #05070a;
+$darkslategray-02: #0a0e12;
+$darkslategray-03: #0f1318;
+$darkslategray-04: #12181d;
+$darkslategray-05: #151c22;
+$darkslategray-06: #172028;
+$darkslategray-07: #1a242d;
+$darkslategray-08: #1c2833; // base
+$darkslategray-09: #343f49;
+$darkslategray-10: #4e5761;
+$darkslategray-11: #697179;
+$darkslategray-12: #858c92;
+$darkslategray-13: #a2a7ac;
+$darkslategray-14: #c0c4c7;
+$darkslategray-15: #dfe1e3;
+
+// Dodgerblue
+$dodgerblue-01: #121321;
+$dodgerblue-02: #191e3c;
+$dodgerblue-03: #202a59;
+$dodgerblue-04: #253777;
+$dodgerblue-05: #284497;
+$dodgerblue-06: #2a51b9;
+$dodgerblue-07: #2b5fdb;
+$dodgerblue-08: #296dff; // base
+$dodgerblue-09: #5a7eff;
+$dodgerblue-10: #798fff;
+$dodgerblue-11: #94a0ff;
+$dodgerblue-12: #abb3ff;
+$dodgerblue-13: #c1c5ff;
+$dodgerblue-14: #d7d8ff;
+$dodgerblue-15: #ebebff;
+
+// Medium Springgreen
+$mediumspringgreen-01: #122018;
+$mediumspringgreen-02: #193928;
+$mediumspringgreen-03: #1f5539;
+$mediumspringgreen-04: #23724b;
+$mediumspringgreen-05: #25905e;
+$mediumspringgreen-06: #25b071;
+$mediumspringgreen-07: #22d085;
+$mediumspringgreen-08: #19f29a; // base
+$mediumspringgreen-09: #57f5a7;
+$mediumspringgreen-10: #78f7b3;
+$mediumspringgreen-11: #94f9c0;
+$mediumspringgreen-12: #acfbcc;
+$mediumspringgreen-13: #c2fcd9;
+$mediumspringgreen-14: #d7fde6;
+$mediumspringgreen-15: #ebfef2;
+
+// Old palette
+// $light_green: #40D29D;
+// $light_blue: #5DADE2 ;
+// $light_yellow: #F7DC6F;
+// $bluegrey_dark: #1C2833;
+// $bluegrey_medium: #2C3E50;
+// $bluegrey_light: #D6DBDF;
+// $bluegrey_lightest: #EAECEE;
 
 // Seed colors
 $base_red: #641E16;
