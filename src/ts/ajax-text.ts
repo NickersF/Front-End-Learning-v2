@@ -21,7 +21,13 @@ export default class AjaxTest {
     }
 
     getTextFileContents() {
-
+        $.ajax({
+            //type: "GET",
+            url: "ajax-text.txt",
+            dataType: "text"
+        }).done((data) => {
+            console.log(data);
+        });
     }
 }
 
