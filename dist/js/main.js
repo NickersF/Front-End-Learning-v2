@@ -49,10 +49,11 @@ class AjaxTest {
     }
     getTextFileContents() {
         $.ajax({
-            url: "ajax-text.txt",
+            url: "ajax_text.txt",
             dataType: "text"
         }).done((data) => {
             console.log(data);
+            $("#ajaxResult").text(data);
         });
     }
 }
