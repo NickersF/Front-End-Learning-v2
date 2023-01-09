@@ -53,7 +53,7 @@ class AjaxTest {
             dataType: "text"
         }).done((data) => {
             console.log(data);
-            $("#ajaxResult").text(data);
+            $("#AjaxResult").text(data);
         });
     }
 }

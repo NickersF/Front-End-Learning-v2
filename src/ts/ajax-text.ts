@@ -1,3 +1,5 @@
+import { data } from "jquery";
+
 declare var AJAX_TEXT: Boolean;
 
 export default class AjaxTest {
@@ -20,6 +22,7 @@ export default class AjaxTest {
         this.getTextFileContents();
     }
 
+
     getTextFileContents() {
         $.ajax({
             //type: "GET",
@@ -28,7 +31,7 @@ export default class AjaxTest {
         }).done((data) => {
             console.log(data);
 
-            $("#ajaxResult").text(data);
+            $("#AjaxResult").text(data);
         });
     }
 }
