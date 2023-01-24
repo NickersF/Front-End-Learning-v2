@@ -14,15 +14,62 @@ export default class DragDrop {
     }
 
     setup() {
-        
         console.log(this);
-
-        this.printTest();
+        this.dragParagraphElement();
+        this.dropDivElementA();
+        this.dropDivElementB();
     }
 
-    printTest() {
-        this.testString = "meow"
-        console.log("test from drag drop" + this.testString);
+    dragParagraphElement() {
+        const element = document.getElementById("DragMe");
+
+        element.addEventListener("dragstart", (e) => {
+            e.dataTransfer.setData("application/my-app", (e.target as HTMLElement).id);
+            e.dataTransfer.effectAllowed = "move";
+            console.log(e.dataTransfer);
+        })
+    }
+
+    dropDivElementA() {
+        const element = document.getElementById("TargetA");
+
+        element.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = "move";
+        });
+
+        element.addEventListener("drop", (e) => {
+            console.log(e);
+
+            e.preventDefault();
+
+            const data = e.dataTransfer.getData("application/my-app");
+
+            console.log(data);
+
+            (e.target as HTMLElement).appendChild(document.getElementById(data));
+        });
+    }
+
+    dropDivElementB() {
+        const element = document.getElementById("TargetB");
+
+        element.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = "move";
+        });
+
+        element.addEventListener("drop", (e) => {
+            console.log(e);
+
+            e.preventDefault();
+
+            const data = e.dataTransfer.getData("application/my-app");
+
+            console.log(data);
+
+            (e.target as HTMLElement).appendChild(document.getElementById(data));
+        });
     }
 }
 
