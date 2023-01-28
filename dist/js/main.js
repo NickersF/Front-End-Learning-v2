@@ -103,9 +103,6 @@ __exportStar(__webpack_require__(/*! ./dragdrop */ "./dragdrop.ts"), exports);
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 class DragDrop {
-    constructor() {
-        this.testString = "";
-    }
     static getInstance() {
         if (!this._instance) {
             this._instance = new DragDrop();

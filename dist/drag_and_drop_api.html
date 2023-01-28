@@ -16,10 +16,23 @@
 </head>
 
 <body>
-    <p id="DragMe" class="border border-danger" draggable="true">Draggable Element</p>
+    <div class="container-fluid d-flex flex-column m-0 p-0 h-100">
+        <div class="row gx-0">
+            <div class="col">
+                <p id="DragMe" class="border border-danger" draggable="true">Draggable Element</p>
 
-    <div id="TargetA" class="border m-2">Drop Zone</div>
-    <div id="TargetB" class="border m-2">Drop Zone</div>
+                <div id="TargetA" class="border m-2">Drop Zone</div>
+                <div id="TargetB" class="border m-2">Drop Zone</div>
+            </div>
+        </div>
+        <div class="row gx-0 flex-grow-1">
+            <div class="col-2 border rounded m-2">col-2</div>
+        </div>
+        <div class="row gx-0 flex-grow-1">
+            <div class="col-2 border rounded m-2">col-2</div>
+            <div class="col-2 border rounded m-2">col-2</div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

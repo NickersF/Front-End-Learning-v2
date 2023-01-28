@@ -3,7 +3,6 @@ declare var DRAGDROP: Boolean;
 export default class DragDrop {
 
     private static _instance: DragDrop;
-    testString: string = "";
 
     static getInstance() {
         if (!this._instance) {
