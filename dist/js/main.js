@@ -211,66 +211,6 @@ jQuery(() => {
 });
 
 
-/***/ }),
-
-/***/ "./page2.exports.ts":
-/*!**************************!*\
-  !*** ./page2.exports.ts ***!
-  \**************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-__exportStar(__webpack_require__(/*! ./page2 */ "./page2.ts"), exports);
-
-
-/***/ }),
-
-/***/ "./page2.ts":
-/*!******************!*\
-  !*** ./page2.ts ***!
-  \******************/
-/***/ ((__unused_webpack_module, exports) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-class Page2 {
-    constructor() {
-        this.testString = "";
-    }
-    static getInstance() {
-        if (!this._instance) {
-            this._instance = new Page2();
-        }
-        return this._instance;
-    }
-    setup() {
-        console.log("Page 2 loaded.");
-        console.log(this);
-    }
-}
-exports["default"] = Page2;
-jQuery(() => {
-    try {
-        if (PAGE_2) {
-            Page2.getInstance().setup();
-        }
-    }
-    catch (error) {
-    }
-});
-
-
 /***/ })
 
 /******/ 	});
@@ -310,7 +250,6 @@ var exports = __webpack_exports__;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 __webpack_require__(/*! ./page1.exports */ "./page1.exports.ts");
-__webpack_require__(/*! ./page2.exports */ "./page2.exports.ts");
 __webpack_require__(/*! ./ajax-text.exports */ "./ajax-text.exports.ts");
 __webpack_require__(/*! ./dragdrop.exports */ "./dragdrop.exports.ts");
 

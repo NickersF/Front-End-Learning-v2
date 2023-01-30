@@ -1,0 +1,56 @@
+@use "./base/colors";
+
+.wrapper {
+    background-color: colors.$teal;
+    border: solid 4px colors.$darkslategray-07;
+    border-radius: 8px;
+    padding: 4px;
+    position: relative;
+    width: 512px;
+    height: 512px;
+}
+
+.blue-box {
+    background-color: colors.$blue;
+    color: colors.$gray-200;
+    border: solid 2px colors.$gray-200;
+    border-radius: 8px;
+    margin: 4px;
+    padding: 4px;
+    position: absolute;
+    width: 75%;
+    height: 25%;
+    left: 64px;
+    top: 32px;
+    z-index: 1;
+}
+
+.orange-box {
+    background-color: colors.$orange;
+    color: colors.$gray-200;
+    border: solid 2px colors.$gray-200;
+    border-radius: 8px;
+    margin: 4px;
+    padding: 4px;
+    position: absolute;
+    width: 75%;
+    height: 15%;
+    left: 16px;
+    top: 64px;
+    z-index: 2;
+}
+
+.purple-box {
+    background-color: colors.$purple;
+    color: colors.$gray-200;
+    border: solid 2px colors.$gray-200;
+    border-radius: 8px;
+    margin: 4px;
+    padding:4px;
+    position: absolute;
+    width: 50%;
+    height: 33%;
+    left: 32px;
+    top: 96px;
+    z-index: 3;
+}
