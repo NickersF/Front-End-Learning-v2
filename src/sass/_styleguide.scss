@@ -2,7 +2,7 @@
 @use "./base/type";
 
 html, body {
-    background-color: colors.$bluegrey_lightest;
+    //background-color: colors.$bluegrey_lightest;
     color: colors.$bluegrey_medium;
     @include type.set-open-sans;
 }
