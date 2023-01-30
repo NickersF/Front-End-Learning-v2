@@ -13,24 +13,32 @@ export default class DragDrop {
     }
 
     setup() {
-        console.log(this);
-        this.dragParagraphElement();
-        this.dropDivElementA();
-        this.dropDivElementB();
+        this.setDragElement("DraggableElement");
+        this.setDropZone("DropZone0");
+        this.setDropZone("DropZone1");
+        this.setDropZone("DropZone2");
+
+        // Hardcoded versions for testing.
+        // this.dragElement();
+        // this.dropDivElementA();
+        // this.dropDivElementB();
     }
 
-    dragParagraphElement() {
-        const element = document.getElementById("DragMe");
+    // Binds a general drop item
+    setDragElement(elementId: string) {
+        const element = document.getElementById(elementId);
 
         element.addEventListener("dragstart", (e) => {
-            e.dataTransfer.setData("application/my-app", (e.target as HTMLElement).id);
+            // Try different formats for setData
+            // e.dataTransfer.setData("application/my-app", (e.target as HTMLElement).id);
+            e.dataTransfer.setData("text/html", (e.target as HTMLElement).id);
             e.dataTransfer.effectAllowed = "move";
-            console.log(e.dataTransfer);
         })
     }
 
-    dropDivElementA() {
-        const element = document.getElementById("TargetA");
+    // Configures a general drop zone
+    setDropZone(elementId: string) {
+        const element = document.getElementById(elementId);
 
         element.addEventListener("dragover", (e) => {
             e.preventDefault();
@@ -38,38 +46,58 @@ export default class DragDrop {
         });
 
         element.addEventListener("drop", (e) => {
-            console.log(e);
-
             e.preventDefault();
-
-            const data = e.dataTransfer.getData("application/my-app");
-
-            console.log(data);
+            // Try different formats for setData
+            // const data = e.dataTransfer.getData("application/my-app");
+            const data = e.dataTransfer.getData("text/html");
 
             (e.target as HTMLElement).appendChild(document.getElementById(data));
         });
     }
 
-    dropDivElementB() {
-        const element = document.getElementById("TargetB");
+    // dragElement() {
+    //     const element = document.getElementById("DragMe");
 
-        element.addEventListener("dragover", (e) => {
-            e.preventDefault();
-            e.dataTransfer.dropEffect = "move";
-        });
+    //     element.addEventListener("dragstart", (e) => {
+    //         // e.dataTransfer.setData("application/my-app", (e.target as HTMLElement).id);
+    //         e.dataTransfer.setData("text/html", (e.target as HTMLElement).id);
+    //         e.dataTransfer.effectAllowed = "move";
+    //     })
+    // }
 
-        element.addEventListener("drop", (e) => {
-            console.log(e);
+    // dropDivElementA() {
+    //     const element = document.getElementById("TargetA");
 
-            e.preventDefault();
+    //     element.addEventListener("dragover", (e) => {
+    //         e.preventDefault();
+    //         e.dataTransfer.dropEffect = "move";
+    //     });
 
-            const data = e.dataTransfer.getData("application/my-app");
+    //     element.addEventListener("drop", (e) => {
+    //         e.preventDefault();
+    //         // const data = e.dataTransfer.getData("application/my-app");
+    //         const data = e.dataTransfer.getData("text/html");
 
-            console.log(data);
+    //         (e.target as HTMLElement).appendChild(document.getElementById(data));
+    //     });
+    // }
 
-            (e.target as HTMLElement).appendChild(document.getElementById(data));
-        });
-    }
+    // dropDivElementB() {
+    //     const element = document.getElementById("TargetB");
+
+    //     element.addEventListener("dragover", (e) => {
+    //         e.preventDefault();
+    //         e.dataTransfer.dropEffect = "move";
+    //     });
+
+    //     element.addEventListener("drop", (e) => {
+    //         e.preventDefault();
+    //         // const data = e.dataTransfer.getData("application/my-app");
+    //         const data = e.dataTransfer.getData("text/html");
+
+    //         (e.target as HTMLElement).appendChild(document.getElementById(data));
+    //     });
+    // }
 }
 
 jQuery(() => {

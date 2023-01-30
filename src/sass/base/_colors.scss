@@ -1,3 +1,5 @@
+// @import "../../bootstrap/variables";
+
 // Darkslategray
 $darkslategray-01: #05070a;
 $darkslategray-02: #0a0e12;
@@ -88,6 +90,10 @@ $color-names-map: (
         background-color: lighten($base_red, $step * 8%);
     }
 }
+
+// .teal-bg {
+//     background-color: $teal;
+// }
 
 // rgb(247, 220, 111)
 // rgb(214, 219, 223)

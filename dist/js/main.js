@@ -110,44 +110,27 @@ class DragDrop {
         return this._instance;
     }
     setup() {
-        console.log(this);
-        this.dragParagraphElement();
-        this.dropDivElementA();
-        this.dropDivElementB();
+        this.setDragElement("DraggableElement");
+        this.setDropZone("DropZone0");
+        this.setDropZone("DropZone1");
+        this.setDropZone("DropZone2");
     }
-    dragParagraphElement() {
-        const element = document.getElementById("DragMe");
+    setDragElement(elementId) {
+        const element = document.getElementById(elementId);
         element.addEventListener("dragstart", (e) => {
-            e.dataTransfer.setData("application/my-app", e.target.id);
+            e.dataTransfer.setData("text/html", e.target.id);
             e.dataTransfer.effectAllowed = "move";
-            console.log(e.dataTransfer);
         });
     }
-    dropDivElementA() {
-        const element = document.getElementById("TargetA");
+    setDropZone(elementId) {
+        const element = document.getElementById(elementId);
         element.addEventListener("dragover", (e) => {
             e.preventDefault();
             e.dataTransfer.dropEffect = "move";
         });
         element.addEventListener("drop", (e) => {
-            console.log(e);
             e.preventDefault();
-            const data = e.dataTransfer.getData("application/my-app");
-            console.log(data);
-            e.target.appendChild(document.getElementById(data));
-        });
-    }
-    dropDivElementB() {
-        const element = document.getElementById("TargetB");
-        element.addEventListener("dragover", (e) => {
-            e.preventDefault();
-            e.dataTransfer.dropEffect = "move";
-        });
-        element.addEventListener("drop", (e) => {
-            console.log(e);
-            e.preventDefault();
-            const data = e.dataTransfer.getData("application/my-app");
-            console.log(data);
+            const data = e.dataTransfer.getData("text/html");
             e.target.appendChild(document.getElementById(data));
         });
     }
