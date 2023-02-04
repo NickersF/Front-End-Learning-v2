@@ -25,8 +25,10 @@ function ajaxWrapperFactory<T>(name: string, method: 'GET' | 'POST' = 'GET') {
 
 
 // Basic usage
+
+// Now we can create uniquely named wrapped, thenable JQuery ajax functions.
 const ajaxGet = ajaxWrapperFactory<{ data: string }>('ajaxGet', 'GET');
-const ajaxPostArrayOjb = ajaxWrapperFactory<{ data: string }>('ajaxPost', 'POST');
+const ajaxPost = ajaxWrapperFactory<{ data: string }>('ajaxPost', 'POST');
 
 // Get with no optional request data
 ajaxGet('https://example.com/api/data').then(data => {
@@ -36,7 +38,7 @@ ajaxGet('https://example.com/api/data').then(data => {
 });
 
 // Post with request data
-ajaxPostArrayOjb('https://example.com/api/data', { data: 'some data' }).then(data => {
+ajaxPost('https://example.com/api/data', { data: 'some data' }).then(data => {
     console.log(data);
 }).catch(error => {
     console.error(error);
