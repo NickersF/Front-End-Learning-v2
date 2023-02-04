@@ -25,7 +25,7 @@ export default class DragDrop {
     }
 
     // Binds a general drop item
-    setDragElement(elementId: string) {
+    setDragElement(elementId: string): void {
         const element = document.getElementById(elementId);
 
         element.addEventListener("dragstart", (e) => {
@@ -98,6 +98,7 @@ export default class DragDrop {
     //         (e.target as HTMLElement).appendChild(document.getElementById(data));
     //     });
     // }
+    
 }
 
 jQuery(() => {
