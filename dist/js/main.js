@@ -245,6 +245,17 @@ __exportStar(__webpack_require__(/*! ./zindex */ "./zindex.ts"), exports);
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 class ZindexSandbox {
+    constructor() {
+        this.blueBoxEl = $("#BlueBox");
+        this.orangeBoxEl = $("#OrangeBox");
+        this.purpleBoxEl = $("#PurpleBox");
+        this.blueBoxZindexNumericInput = $("#BlueBoxZindex_InputNumber");
+        this.blueBoxOpacityRangeInput = $("#BlueBoxOpacity_Range");
+        this.orangeBoxZindexNumericInput = $("#OrangeBoxZindex_InputNumber");
+        this.orangeBoxOpacityRangeInput = $("#OrangeBoxOpacity_Range");
+        this.purpleBoxZindexNumericInput = $("#PurpleBoxZindex_InputNumber");
+        this.purpleBoxOpacityRangeInput = $("#PurpleBoxOpacity_Range");
+    }
     static getInstance() {
         if (!this._instance) {
             this._instance = new ZindexSandbox();
@@ -252,6 +263,53 @@ class ZindexSandbox {
         return this._instance;
     }
     setup() {
+        let self = this;
+        self.blueBoxZindexChangeValue();
+        self.blueBoxOpacityInputValue();
+        self.orangeBoxZindexChangeValue();
+        self.orangeBoxOpacityInputValue();
+        self.purpleBoxZindexChangeValue();
+        self.purpleBoxOpacityInputValue();
+    }
+    changeZindexEvent(numericInputEl) {
+    }
+    changeOpacityEvent(rangeSliderInputEl) {
+    }
+    blueBoxZindexChangeValue() {
+        let self = this;
+        self.blueBoxZindexNumericInput.on("change", (e) => {
+            self.blueBoxEl.css("z-index", $(e.target).val());
+        });
+    }
+    blueBoxOpacityInputValue() {
+        let self = this;
+        self.blueBoxOpacityRangeInput.on("input", (e) => {
+            self.blueBoxEl.css("opacity", $(e.target).val());
+        });
+    }
+    orangeBoxZindexChangeValue() {
+        let self = this;
+        self.orangeBoxZindexNumericInput.on("change", (e) => {
+            self.orangeBoxEl.css("z-index", $(e.target).val());
+        });
+    }
+    orangeBoxOpacityInputValue() {
+        let self = this;
+        self.orangeBoxOpacityRangeInput.on("input", (e) => {
+            self.orangeBoxEl.css("opacity", $(e.target).val());
+        });
+    }
+    purpleBoxZindexChangeValue() {
+        let self = this;
+        self.purpleBoxZindexNumericInput.on("change", (e) => {
+            self.purpleBoxEl.css("z-index", $(e.target).val());
+        });
+    }
+    purpleBoxOpacityInputValue() {
+        let self = this;
+        self.purpleBoxOpacityRangeInput.on("input", (e) => {
+            self.purpleBoxEl.css("opacity", $(e.target).val());
+        });
     }
 }
 exports["default"] = ZindexSandbox;
