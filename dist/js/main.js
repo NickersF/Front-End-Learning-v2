@@ -211,6 +211,89 @@ jQuery(() => {
 });
 
 
+/***/ }),
+
+/***/ "./zindex.exports.ts":
+/*!***************************!*\
+  !*** ./zindex.exports.ts ***!
+  \***************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+__exportStar(__webpack_require__(/*! ./zindex */ "./zindex.ts"), exports);
+
+
+/***/ }),
+
+/***/ "./zindex.ts":
+/*!*******************!*\
+  !*** ./zindex.ts ***!
+  \*******************/
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+class ZindexSandbox {
+    constructor() {
+        this.blueBoxEl = $("#BlueBox");
+        this.orangeBoxEl = $("#OrangeBox");
+        this.purpleBoxEl = $("#PurpleBox");
+        this.blueBoxZindexNumericInput = $("#BlueBoxZindex_InputNumber");
+        this.blueBoxOpacityRangeInput = $("#BlueBoxOpacity_Range");
+        this.orangeBoxZindexNumericInput = $("#OrangeBoxZindex_InputNumber");
+        this.orangeBoxOpacityRangeInput = $("#OrangeBoxOpacity_Range");
+        this.purpleBoxZindexNumericInput = $("#PurpleBoxZindex_InputNumber");
+        this.purpleBoxOpacityRangeInput = $("#PurpleBoxOpacity_Range");
+    }
+    static getInstance() {
+        if (!this._instance) {
+            this._instance = new ZindexSandbox();
+        }
+        return this._instance;
+    }
+    setup() {
+        let self = this;
+        self.changeZindexEvent(self.blueBoxZindexNumericInput, self.blueBoxEl);
+        self.changeOpacityEvent(self.blueBoxOpacityRangeInput, self.blueBoxEl);
+        self.changeZindexEvent(self.orangeBoxZindexNumericInput, self.orangeBoxEl);
+        self.changeOpacityEvent(self.orangeBoxOpacityRangeInput, self.orangeBoxEl);
+        self.changeZindexEvent(self.purpleBoxZindexNumericInput, self.purpleBoxEl);
+        self.changeOpacityEvent(self.purpleBoxOpacityRangeInput, self.purpleBoxEl);
+    }
+    changeZindexEvent(numericInputEl, cssTargetEl) {
+        numericInputEl.on("change", (e) => {
+            cssTargetEl.css("z-index", $(e.target).val());
+        });
+    }
+    changeOpacityEvent(rangeSliderInputEl, cssTargetEl) {
+        rangeSliderInputEl.on("input", (e) => {
+            cssTargetEl.css("opacity", $(e.target).val());
+        });
+    }
+}
+exports["default"] = ZindexSandbox;
+jQuery(() => {
+    try {
+        if (ZINDEX) {
+            ZindexSandbox.getInstance().setup();
+        }
+    }
+    catch (error) {
+    }
+});
+
+
 /***/ })
 
 /******/ 	});
@@ -252,6 +335,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 __webpack_require__(/*! ./page1.exports */ "./page1.exports.ts");
 __webpack_require__(/*! ./ajax-text.exports */ "./ajax-text.exports.ts");
 __webpack_require__(/*! ./dragdrop.exports */ "./dragdrop.exports.ts");
+__webpack_require__(/*! ./zindex.exports */ "./zindex.exports.ts");
 
 })();
 
