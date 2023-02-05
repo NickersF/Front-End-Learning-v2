@@ -264,51 +264,21 @@ class ZindexSandbox {
     }
     setup() {
         let self = this;
-        self.blueBoxZindexChangeValue();
-        self.blueBoxOpacityInputValue();
-        self.orangeBoxZindexChangeValue();
-        self.orangeBoxOpacityInputValue();
-        self.purpleBoxZindexChangeValue();
-        self.purpleBoxOpacityInputValue();
+        self.changeZindexEvent(self.blueBoxZindexNumericInput, self.blueBoxEl);
+        self.changeOpacityEvent(self.blueBoxOpacityRangeInput, self.blueBoxEl);
+        self.changeZindexEvent(self.orangeBoxZindexNumericInput, self.orangeBoxEl);
+        self.changeOpacityEvent(self.orangeBoxOpacityRangeInput, self.orangeBoxEl);
+        self.changeZindexEvent(self.purpleBoxZindexNumericInput, self.purpleBoxEl);
+        self.changeOpacityEvent(self.purpleBoxOpacityRangeInput, self.purpleBoxEl);
     }
-    changeZindexEvent(numericInputEl) {
-    }
-    changeOpacityEvent(rangeSliderInputEl) {
-    }
-    blueBoxZindexChangeValue() {
-        let self = this;
-        self.blueBoxZindexNumericInput.on("change", (e) => {
-            self.blueBoxEl.css("z-index", $(e.target).val());
+    changeZindexEvent(numericInputEl, cssTargetEl) {
+        numericInputEl.on("change", (e) => {
+            cssTargetEl.css("z-index", $(e.target).val());
         });
     }
-    blueBoxOpacityInputValue() {
-        let self = this;
-        self.blueBoxOpacityRangeInput.on("input", (e) => {
-            self.blueBoxEl.css("opacity", $(e.target).val());
-        });
-    }
-    orangeBoxZindexChangeValue() {
-        let self = this;
-        self.orangeBoxZindexNumericInput.on("change", (e) => {
-            self.orangeBoxEl.css("z-index", $(e.target).val());
-        });
-    }
-    orangeBoxOpacityInputValue() {
-        let self = this;
-        self.orangeBoxOpacityRangeInput.on("input", (e) => {
-            self.orangeBoxEl.css("opacity", $(e.target).val());
-        });
-    }
-    purpleBoxZindexChangeValue() {
-        let self = this;
-        self.purpleBoxZindexNumericInput.on("change", (e) => {
-            self.purpleBoxEl.css("z-index", $(e.target).val());
-        });
-    }
-    purpleBoxOpacityInputValue() {
-        let self = this;
-        self.purpleBoxOpacityRangeInput.on("input", (e) => {
-            self.purpleBoxEl.css("opacity", $(e.target).val());
+    changeOpacityEvent(rangeSliderInputEl, cssTargetEl) {
+        rangeSliderInputEl.on("input", (e) => {
+            cssTargetEl.css("opacity", $(e.target).val());
         });
     }
 }

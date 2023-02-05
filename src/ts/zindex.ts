@@ -25,71 +25,27 @@ export default class ZindexSandbox {
     setup() {
         let self = this;
 
-        self.blueBoxZindexChangeValue();
-        self.blueBoxOpacityInputValue();
+        self.changeZindexEvent(self.blueBoxZindexNumericInput, self.blueBoxEl);
+        self.changeOpacityEvent(self.blueBoxOpacityRangeInput, self.blueBoxEl);
 
-        self.orangeBoxZindexChangeValue();
-        self.orangeBoxOpacityInputValue()
+        self.changeZindexEvent(self.orangeBoxZindexNumericInput, self.orangeBoxEl);
+        self.changeOpacityEvent(self.orangeBoxOpacityRangeInput, self.orangeBoxEl);
 
-        self.purpleBoxZindexChangeValue();
-        self.purpleBoxOpacityInputValue();
+        self.changeZindexEvent(self.purpleBoxZindexNumericInput, self.purpleBoxEl);
+        self.changeOpacityEvent(self.purpleBoxOpacityRangeInput, self.purpleBoxEl);
     }
 
     // Generic function that binds an event to a provided JQuery Element.
-    changeZindexEvent(numericInputEl: JQuery<HTMLElement>) {
-
+    changeZindexEvent(numericInputEl: JQuery<HTMLElement>, cssTargetEl: JQuery<HTMLElement>): void {
+        numericInputEl.on("change", (e) => {
+            cssTargetEl.css("z-index", $(e.target).val() as number);
+        });
     }
 
     // Generic function that binds and event to a provided JQuery 
-    changeOpacityEvent(rangeSliderInputEl: JQuery<HTMLElement>) {
-
-    }
-
-    blueBoxZindexChangeValue() {
-        let self = this;
-
-        self.blueBoxZindexNumericInput.on("change", (e) => {
-            self.blueBoxEl.css("z-index", $(e.target).val() as number);
-        });
-    }
-
-    blueBoxOpacityInputValue() {
-        let self = this;
-
-        self.blueBoxOpacityRangeInput.on("input", (e) => {
-            self.blueBoxEl.css("opacity", $(e.target).val() as number);
-        });
-    }
-
-    orangeBoxZindexChangeValue() {
-        let self = this;
-
-        self.orangeBoxZindexNumericInput.on("change", (e) => {
-            self.orangeBoxEl.css("z-index", $(e.target).val() as number);
-        });
-    }
-
-    orangeBoxOpacityInputValue() {
-        let self = this;
-
-        self.orangeBoxOpacityRangeInput.on("input", (e) => {
-            self.orangeBoxEl.css("opacity", $(e.target).val() as number);
-        });
-    }
-
-    purpleBoxZindexChangeValue() {
-        let self = this;
-
-        self.purpleBoxZindexNumericInput.on("change", (e) => {
-            self.purpleBoxEl.css("z-index", $(e.target).val() as number);
-        });
-    }
-
-    purpleBoxOpacityInputValue() {
-        let self = this;
-
-        self.purpleBoxOpacityRangeInput.on("input", (e) => {
-            self.purpleBoxEl.css("opacity", $(e.target).val() as number);
+    changeOpacityEvent(rangeSliderInputEl: JQuery<HTMLElement>, cssTargetEl: JQuery<HTMLElement>): void {
+        rangeSliderInputEl.on("input", (e) => {
+            cssTargetEl.css("opacity", $(e.target).val() as number);
         });
     }
 }
