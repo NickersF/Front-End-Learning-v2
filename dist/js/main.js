@@ -213,6 +213,62 @@ jQuery(() => {
 
 /***/ }),
 
+/***/ "./radialmenu.exports.ts":
+/*!*******************************!*\
+  !*** ./radialmenu.exports.ts ***!
+  \*******************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+__exportStar(__webpack_require__(/*! ./radialmenu */ "./radialmenu.ts"), exports);
+
+
+/***/ }),
+
+/***/ "./radialmenu.ts":
+/*!***********************!*\
+  !*** ./radialmenu.ts ***!
+  \***********************/
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+class RadialMenuComponent {
+    static getInstance() {
+        if (!this._instance) {
+            this._instance = new RadialMenuComponent();
+        }
+        return this._instance;
+    }
+    setup() {
+        console.log("test");
+    }
+}
+exports["default"] = RadialMenuComponent;
+jQuery(() => {
+    try {
+        if (RADIALMENU) {
+            RadialMenuComponent.getInstance().setup();
+        }
+    }
+    catch (error) {
+    }
+});
+
+
+/***/ }),
+
 /***/ "./zindex.exports.ts":
 /*!***************************!*\
   !*** ./zindex.exports.ts ***!
@@ -336,6 +392,7 @@ __webpack_require__(/*! ./page1.exports */ "./page1.exports.ts");
 __webpack_require__(/*! ./ajax-text.exports */ "./ajax-text.exports.ts");
 __webpack_require__(/*! ./dragdrop.exports */ "./dragdrop.exports.ts");
 __webpack_require__(/*! ./zindex.exports */ "./zindex.exports.ts");
+__webpack_require__(/*! ./radialmenu.exports */ "./radialmenu.exports.ts");
 
 })();
 
