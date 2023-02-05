@@ -4,23 +4,57 @@
 // without having to re-write the JQuery ajax function over and over and over without naming
 // context or type information. This will also motivate implementing TS viewmodels for our
 // data.
+// function ajaxWrapperFactory<T>(method: 'GET' | 'POST' = 'GET') {
+//     return function (url: string, data?: T) {
+//         return new Promise<any>((resolve, reject) => {
+//             $.ajax({
+//                 type: method,
+//                 url,
+//                 data,
+//                 success: function (response) {
+//                     resolve(response);
+//                 },
+//                 error: function (error) {
+//                     reject(error);
+//                 },
+//             });
+//         });
+//     };
+// }
+
+// Added sanity checks and response error handling.
 function ajaxWrapperFactory<T>(method: 'GET' | 'POST' = 'GET') {
     return function (url: string, data?: T) {
+
+        if (!url) {
+            return Promise.reject(new Error('URL is required'));
+        }
+
+        if (method === 'POST' && data === undefined) {
+            return Promise.reject(new Error('Data is required for POST method'));
+        }
+
         return new Promise<any>((resolve, reject) => {
             $.ajax({
                 type: method,
                 url,
                 data,
+                timeout: 5000,
                 success: function (response) {
-                    resolve(response);
+                    if (response.status >= 200 && response.status < 300) {
+                        resolve(response.data);
+                    } else {
+                        reject(new Error(`HTTP status code: ${response.status}`));
+                    }
                 },
-                error: function (error) {
-                    reject(error);
+                error: function (jqXHR) {
+                    reject(jqXHR.responseJSON ? jqXHR.responseJSON.error : jqXHR.statusText);
                 },
             });
         });
     };
 }
+
 
 
 
