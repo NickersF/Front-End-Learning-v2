@@ -1,2 +1,159 @@
 @use "./base/colors";
 
+.radial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 512px;
+    height: 512px;
+    background-color: aqua;
+}
+
+.radial-action-center {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    border: 48px solid aqua;
+    border-radius: 100%;
+    box-sizing: border-box;
+    background-color: chocolate;
+}
+
+
+.radial-top-left {
+    flex-basis: 50%;
+    height: 50%;
+    border-top-left-radius: 100%;
+    background-color: burlywood;
+}
+
+.radial-top-right {
+    flex-basis: 50%;
+    height: 50%;
+    border-top-right-radius: 100%;
+    background-color: darkkhaki;
+}
+
+.radial-bottom-left {
+    flex-basis: 50%;
+    height: 50%;
+    border-bottom-left-radius: 100%;
+    background-color: lightsalmon;
+}
+
+.radial-bottom-right {
+    flex-basis: 50%;
+    height: 50%;
+    border-bottom-right-radius: 100%;
+    background-color: lightcoral;
+}
+
+// Donut approach
+// .circle {
+//     position: relative;
+//     width: 200px;
+//     height: 200px;
+//     border-radius: 50%;
+//     background-color: #333;
+//   }
+  
+//   .hole {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     width: 60px;
+//     height: 60px;
+//     border-radius: 50%;
+//     background-color: #fff;
+//     z-index: 1;
+//   }
+  
+//   .slice {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     width: 100%;
+//     height: 100%;
+//     transform-origin: 0 0;
+//   }
+  
+//   .hex {
+//     position: absolute;
+//     top: -30px;
+//     left: -30px;
+//     width: 60px;
+//     height: 60px;
+//     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+//   }
+  
+//   .slice1 {
+//     transform: rotate(30deg) translate(-50%);
+//   }
+  
+//   .slice2 {
+//     transform: rotate(90deg) translate(-50%);
+//   }
+  
+//   .slice3 {
+//     transform: rotate(150deg) translate(-50%);
+//   }
+  
+//   .slice4 {
+//     transform: rotate(210deg) translate(-50%);
+//   }
+  
+//   .slice5 {
+//     transform: rotate(270deg) translate(-50%);
+//   }
+  
+//   .slice6 {
+//     transform: rotate(330deg) translate(-50%);
+//   }
+  
+//   .slice1 .hex {
+//     background-color: #f00;
+//   }
+  
+//   .slice2 .hex {
+//     background-color: #0f0;
+//   }
+  
+//   .slice3 .hex {
+//     background-color: #00f;
+//   }
+  
+//   .slice4 .hex {
+//     background-color: #ff0;
+//   }
+  
+//   .slice5 .hex {
+//     background-color: #f0f;
+//   }
+  
+//   .slice6 .hex {
+//     background-color: #0ff;
+//   }
+
+.sector-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .sector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform-origin: center center;
+    transform: rotate(45deg);
+    clip-path: polygon(50% 50%, 0 0, 100% 0);
+    background-color: #00a3e0;
+  }
+  

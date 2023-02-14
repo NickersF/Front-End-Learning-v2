@@ -301,4 +301,73 @@ html, body {
   z-index: 3;
 }
 
+.radial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 512px;
+  height: 512px;
+  background-color: aqua;
+}
+
+.radial-action-center {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  border: 48px solid aqua;
+  border-radius: 100%;
+  box-sizing: border-box;
+  background-color: chocolate;
+}
+
+.radial-top-left {
+  flex-basis: 50%;
+  height: 50%;
+  border-top-left-radius: 100%;
+  background-color: burlywood;
+}
+
+.radial-top-right {
+  flex-basis: 50%;
+  height: 50%;
+  border-top-right-radius: 100%;
+  background-color: darkkhaki;
+}
+
+.radial-bottom-left {
+  flex-basis: 50%;
+  height: 50%;
+  border-bottom-left-radius: 100%;
+  background-color: lightsalmon;
+}
+
+.radial-bottom-right {
+  flex-basis: 50%;
+  height: 50%;
+  border-bottom-right-radius: 100%;
+  background-color: lightcoral;
+}
+
+.sector-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.sector {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform-origin: center center;
+  transform: rotate(45deg);
+  clip-path: polygon(50% 50%, 0 0, 100% 0);
+  background-color: #00a3e0;
+}
+
 /*# sourceMappingURL=styles.css.map */
