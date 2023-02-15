@@ -253,6 +253,12 @@ class RadialMenuComponent {
     }
     setup() {
         console.log("test");
+        this.testPathClick();
+    }
+    testPathClick() {
+        $("#TestSVGPath").on("click", (e) => {
+            console.log(e);
+        });
     }
 }
 exports["default"] = RadialMenuComponent;
