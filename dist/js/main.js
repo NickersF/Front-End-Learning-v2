@@ -36,6 +36,26 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 class AjaxTest {
     constructor() {
         this.testString = "";
+        this.testVM = {
+            "id": "number",
+            "Name:": "string",
+        };
+        this.baseProperties = {
+            createdDate: 'Date',
+            updatedDate: 'Date',
+            userKey: 'string',
+            tenantKey: 'string'
+        };
+        this.compositeProperties = {
+            employeeName: 'string',
+            activity: 'string',
+            startDate: 'Date',
+            payRate: 'number'
+        };
+        this.NewCompositeInterface = this.createCompositeInterface(this.baseProperties, this.compositeProperties);
+    }
+    createCompositeInterface(baseProperties, compositeProperties) {
+        return Object.assign(Object.assign({}, baseProperties), compositeProperties);
     }
     static getInstance() {
         if (!this._instance) {
@@ -45,6 +65,7 @@ class AjaxTest {
     }
     setup() {
         console.log(this);
+        console.log(this.NewCompositeInterface);
         this.getTextFileContents();
     }
     getTextFileContents() {
