@@ -301,4 +301,15 @@ html, body {
   z-index: 3;
 }
 
+.radial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 512px;
+  height: 512px;
+  background-color: aqua;
+}
+
 /*# sourceMappingURL=styles.css.map */

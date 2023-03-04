@@ -6,6 +6,31 @@ export default class AjaxTest {
 
     private static _instance: AjaxTest;
     testString: string = "";
+    testVM = {
+        "id": "number",
+        "Name:": "string",
+    }
+
+    createCompositeInterface<Base, Composite>(baseProperties: Base, compositeProperties: Composite) {
+        return { ...baseProperties, ...compositeProperties } as Base & Composite;
+    }
+
+    baseProperties = {
+        createdDate: 'Date',
+        updatedDate: 'Date',
+        userKey: 'string',
+        tenantKey: 'string'
+    };
+
+    compositeProperties = {
+        employeeName: 'string',
+        activity: 'string',
+        startDate: 'Date',
+        payRate: 'number'
+    };
+
+    NewCompositeInterface = this.createCompositeInterface<any, any>(this.baseProperties, this.compositeProperties);
+
 
     static getInstance() {
         if (!this._instance) {
@@ -16,8 +41,9 @@ export default class AjaxTest {
     }
 
     setup() {
-        
+
         console.log(this);
+        console.log(this.NewCompositeInterface);
 
         this.getTextFileContents();
     }
