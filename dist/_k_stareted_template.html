@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Kendo UI using CDN</title>
+
+        <!-- <link rel="stylesheet" href="https://kendo.cdn.telerik.com/themes/6.2.0/default/default-main.css" /> -->
+        <link href="https://kendo.cdn.telerik.com/themes/6.2.0/bootstrap/bootstrap-main.css" rel="stylesheet" />
+
+        <script src="https://kendo.cdn.telerik.com/2023.1.314/js/jquery.min.js"></script>
+        <script src="https://kendo.cdn.telerik.com/2023.1.314/js/jszip.min.js"></script>
+        <script src="https://kendo.cdn.telerik.com/2023.1.314/js/kendo.all.min.js"></script>
+    </head>
+    <body>
+      <input id="ddl" />
+      <script>
+        $("#ddl").kendoDropDownList({
+          dataTextField: "text",
+          dataValueField: "value",
+          dataSource: [
+            { text: "Item1", value: "1" },
+            { text: "Item2", value: "2" }
+          ]
+        });
+      </script>   
+    </body>
+</html>
