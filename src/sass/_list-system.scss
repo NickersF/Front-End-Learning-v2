@@ -1,0 +1,39 @@
+#ListContainer {
+    width: 256px;
+}
+
+.list-header {
+    //padding: 0.5rem;
+}
+
+.list-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-title span {
+    flex-grow: 1;
+}
+
+.list-item-root {
+    //padding: 0.5rem;
+}
+
+.list-item-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-item-content span {
+    flex-grow: 1;
+}
+
+.list-item-detail-expander {
+
+}
+
+.list-item-detail-expander button {
+    width: 100%;
+}
