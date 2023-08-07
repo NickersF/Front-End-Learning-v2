@@ -1,0 +1,67 @@
+@use "colors" as c;
+
+.fe-button {
+    background-color: c.$gray-tint-900;
+    color: c.$gray-tint-200;
+    border-width: 1px;
+    border-style: solid;
+    border-color: c.$gray-tint-600;
+    border-radius: 2px;
+    transition: all 0.33s ease-out;
+}
+
+.fe-button:focus-visible {
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: c.$gray-tint-1000;
+}
+
+.fe-button:hover {
+    background-color: c.$gray-tint-800;
+    color: c.$gray-tint-100;
+    border-width: 1px;
+    border-style: solid;
+    border-color: c.$gray-tint-400;
+}
+
+.fe-button:active {
+    background-color: c.$gray-tint-1000;
+    color: c.$gray-tint-300;
+    border-width: 1px;
+    border-style: solid;
+    border-color: c.$gray-tint-500;
+}
+
+// No radius
+
+.fe-button-br-0 {
+    background-color: c.$gray-tint-900;
+    color: c.$gray-tint-200;
+    border-width: 1px;
+    border-style: solid;
+    border-color: c.$gray-tint-300;
+    border-radius: 0;
+    transition: all 0.33s ease-out;
+}
+
+.fe-button-br-0:focus-visible {
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: c.$gray-tint-1000;
+}
+
+.fe-button-br-0:hover {
+    background-color: c.$gray-tint-800;
+    color: c.$gray-tint-100;
+    border-width: 1px;
+    border-style: solid;
+    border-color: c.$gray-tint-100;
+}
+
+.fe-button-br-0:active {
+    background-color: c.$gray-tint-1000;
+    color: c.$gray-tint-300;
+    border-width: 1px;
+    border-style: solid;
+    border-color: c.$gray-tint-300;
+}

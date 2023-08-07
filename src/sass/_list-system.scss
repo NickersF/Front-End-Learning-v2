@@ -1,9 +1,12 @@
+@use "./base/colors" as c;
+
 #ListContainer {
     width: 256px;
 }
 
 .list-header {
-    //padding: 0.5rem;
+    background-color: c.$gray-ui-500;
+    padding: 0.285rem;
 }
 
 .list-title {
@@ -17,13 +20,17 @@
 }
 
 .list-item-root {
-    //padding: 0.5rem;
+    background-color: c.$gray-ui-600;
+    //border-top: 0.285rem solid c.$gray-tint-800;
+    // padding-top: 0.285rem;
+    // padding-bottom: 0.285rem;
 }
 
 .list-item-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0.285rem;
 }
 
 .list-item-content span {
