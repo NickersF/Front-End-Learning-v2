@@ -1,7 +1,9 @@
 @use "./base/colors" as c;
 
 #ListContainer {
-    width: 256px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: c.$gray-tint-700;
 }
 
 .list-header {
@@ -20,10 +22,7 @@
 }
 
 .list-item-root {
-    background-color: c.$gray-ui-600;
-    //border-top: 0.285rem solid c.$gray-tint-800;
-    // padding-top: 0.285rem;
-    // padding-bottom: 0.285rem;
+    background-color: c.$gray-ui-700;
 }
 
 .list-item-content {
@@ -31,6 +30,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.285rem;
+    border-top: 1px solid c.$gray-tint-800;
 }
 
 .list-item-content span {
@@ -43,4 +43,29 @@
 
 .list-item-detail-expander button {
     width: 100%;
+    border-left: none;
+    border-top: 1px solid c.$gray-tint-800;
+    border-right: none;
+    border-bottom: none;
+}
+
+.list-item-detail-expander button:hover {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid c.$gray-tint-800;
+    border-right: none;
+    border-bottom: none;
+}
+
+.list-item-detail-expander button:active {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid c.$gray-tint-800;
+    border-right: none;
+    border-bottom: none;
+}
+
+.list-item-detail-panel {
+    border-top: 1px solid c.$gray-tint-800;
+    padding: 4px;
 }

@@ -12069,7 +12069,7 @@ html, body {
   border-width: 1px;
   border-style: solid;
   border-color: #9c9c9c;
-  border-radius: 2px;
+  border-radius: 4px;
   transition: all 0.33s ease-out;
 }
 
@@ -12154,7 +12154,9 @@ html, body {
 }
 
 #ListContainer {
-  width: 256px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #acacac;
 }
 
 .list-header {
@@ -12173,7 +12175,7 @@ html, body {
 }
 
 .list-item-root {
-  background-color: #ebebeb;
+  background-color: #f5f5f5;
 }
 
 .list-item-content {
@@ -12181,6 +12183,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   padding: 0.285rem;
+  border-top: 1px solid #bcbcbc;
 }
 
 .list-item-content span {
@@ -12189,6 +12192,31 @@ html, body {
 
 .list-item-detail-expander button {
   width: 100%;
+  border-left: none;
+  border-top: 1px solid #bcbcbc;
+  border-right: none;
+  border-bottom: none;
+}
+
+.list-item-detail-expander button:hover {
+  width: 100%;
+  border-left: none;
+  border-top: 1px solid #bcbcbc;
+  border-right: none;
+  border-bottom: none;
+}
+
+.list-item-detail-expander button:active {
+  width: 100%;
+  border-left: none;
+  border-top: 1px solid #bcbcbc;
+  border-right: none;
+  border-bottom: none;
+}
+
+.list-item-detail-panel {
+  border-top: 1px solid #bcbcbc;
+  padding: 4px;
 }
 
 /*# sourceMappingURL=styles.css.map */
