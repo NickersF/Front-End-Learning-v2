@@ -1,0 +1,66 @@
+@use "./base/colors" as c;
+
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/arrow-down.css');
+
+.main-bg {
+    background-color: c.$darkslategray-04;
+    color: c.$darkslategray-10;
+}
+
+.container-bg {
+    background-color: c.$darkslategray-05;
+}
+
+.container-anim-1 {
+    background-color: c.$darkslategray-04;
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    transition:
+        background-color 0.75s ease-in,
+        width 0.75s ease-in,
+        height 0.75s ease-in;
+}
+
+.container-anim-1:hover {
+    background-color: c.$darkslategray-06;
+    width: 640px;
+    height: 640px;
+}
+
+.border-anim-1 {
+    width: 64px;
+    height: 64px;
+    background-color: c.$darkslategray-08;
+    border-color: c.$mediumspringgreen-07;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5%;
+    transition:
+        rotate 0.5s ease-in,
+        border-radius 0.5s ease-in 0.25s;
+        
+}
+
+.border-anim-1:hover {
+    border-radius: 100%;
+    rotate: 180deg;
+}
+
+.gg-arrow-down {
+    color: c.$mediumspringgreen-07;
+}
+
+// .gg-arrow-down {
+//     width: 0px;
+//     height: 0px;
+//     color: c.$mediumspringgreen-07;
+//     transition:
+//         width 0.25s ease-in 0.25s,
+//         height 0.25s ease-in 0.25s;
+// }
+
+// .gg-arrow-down:hover {
+//     width: 32px;
+//     height: 32px;
+// }
