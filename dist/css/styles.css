@@ -12265,4 +12265,67 @@ html, body {
   color: #22d085;
 }
 
+.box-anim-1 {
+  width: 96px;
+  height: 96px;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-name: animateBackground;
+}
+
+@keyframes animateBackground {
+  from {
+    background-color: #296dff;
+  }
+  to {
+    background-color: #25905e;
+  }
+}
+.multi-container {
+  width: 256px;
+  height: 64px;
+  border-radius: 4px;
+}
+
+.multi-container div {
+  border-radius: 4px;
+}
+
+.boxy-1 {
+  width: 56px;
+  height: 56px;
+  background-color: #1c2833;
+  animation-duration: 1s;
+  animation-name: boxyFadeIn;
+}
+
+.boxy-2 {
+  width: 56px;
+  height: 56px;
+  background-color: #1c2833;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+  animation-name: boxyFadeIn;
+}
+
+.boxy-3 {
+  width: 56px;
+  height: 56px;
+  background-color: #1c2833;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+  animation-name: boxyFadeIn;
+}
+
+@keyframes boxyFadeIn {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

@@ -14,14 +14,25 @@
 
 <body>
     <div class="d-flex justify-content-center align-items-center main-bg h-100">
-        <div class="d-flex justify-content-center align-items-center container-bg">
-            TEST
+        <!-- <div class="d-flex justify-content-center align-items-center container-bg">
+            <div id="box1" class="box-anim-1"></div>
+        </div> -->
+        <div class="d-flex justify-content-around align-items-center multi-container">
+            <div class="boxy-1"></div>
+            <div class="boxy-2"></div>
+            <div class="boxy-3"></div>
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <!-- Custom JS -->
+    <script>
+        let box1El = document.getElementById("box1");
+        let computedStyle = window.getComputedStyle(box1El);
+        let backgroundColor = computedStyle.backgroundColor;
+        console.dir(backgroundColor);
+    </script>
     <script src="./js/main.js"></script>
 </body>
 
