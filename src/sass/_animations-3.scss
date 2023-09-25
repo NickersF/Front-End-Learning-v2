@@ -1,0 +1,42 @@
+@use "./base/colors" as c;
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+.nf-nav {
+    background-color: #172028;
+    border-radius: 4px;
+}
+
+.nf-nav-item {
+    background-color: #172028;
+    color: #19F29A;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nf-nav-icon {
+    color: #19F29A;
+    display: inline-block;
+    transform-origin: center;
+    transition: transform 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+.nf-nav-text:hover .nf-nav-icon {
+    color: #296DFF;
+    transform-origin: center;
+    transform: rotate(360deg);
+}
+
+.nf-nav-text:not(.nf-nav-icon) {
+    color: transparent;
+    background-image: linear-gradient(90deg, #296DFF 50%, #19F29A 50%);
+    background-position: 75%;
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: background-position 0.4s ease-out;
+}
+
+.nf-nav-text:hover:not(.nf-nav-icon) {
+    background-position: 0;
+}
