@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+      "forceConsistentCasingInFileNames": true,
       "outDir": "../dist/src",
       "module": "commonjs",
       "removeComments": true,
