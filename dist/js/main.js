@@ -309,6 +309,11 @@ __webpack_require__(/*! ./dragdrop.exports */ "./dragdrop.exports.ts");
 __webpack_require__(/*! ./zindex.exports */ "./zindex.exports.ts");
 __webpack_require__(/*! ./radialmenu.exports */ "./radialmenu.exports.ts");
 __webpack_require__(/*! ./animejs_test.exports */ "./animejs_test.exports.ts");
+let currentPage = window.location.pathname;
+console.log(currentPage);
+if (currentPage.includes("animation")) {
+    console.log("animation page active");
+}
 
 })();
 
