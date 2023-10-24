@@ -1,19 +1,16 @@
-import anime from 'animejs';
+//import anime from 'animejs';
 
-function testAnime() {
+export function testAnime() {
     let element = document.querySelector(".ajs-box");
 
-    if (element) {
-        anime({
-            target: element,
-            translateX: 250,
-            rotate: '1turn',
-            duration: 1000,
-            easing: 'easeInOutQuad',
-        });
-    }
+    console.log(element);
+
+    // anime({
+    //     targets: '.css-selector-demo .el',
+    //     translateX: 250
+    // });
 }
 
-$(function() {
+jQuery(() => {
     testAnime();
 });

@@ -41,5 +41,8 @@
   },
   "browser": {
     "fs": false
+  },
+  "devDependencies": {
+    "@types/animejs": "^3.1.8"
   }
 }
