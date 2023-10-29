@@ -4,13 +4,17 @@
 @use "base/spacing";
 @use "base/icon-styles";
 @use "base/buttons";
-
 @use "styleguide";
-@use "vertnav";
-@use "zindex";
-@use "radialmenu";
-@use "list-system";
-@use "animations-1";
-@use "animations-2";
-@use "animations-3";
-@use "animejs_test";
+
+@use "./anim-basics";
+@use "./anim-seq-boxes";
+
+@use "./animejs_test";
+
+@use "./comp-list-system";
+
+@use "./lay-zindex";
+
+@use "./nav-animated-icons";
+@use "./nav-radial-menu";
+@use "./nav-vertical";
