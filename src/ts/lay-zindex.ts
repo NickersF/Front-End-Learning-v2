@@ -1,6 +1,4 @@
-declare var ZINDEX: Boolean;
-
-export default class ZindexSandbox {
+export class ZindexSandbox {
     private static _instance: ZindexSandbox;
     // Boxes
     blueBoxEl = $("#BlueBox");
@@ -49,13 +47,3 @@ export default class ZindexSandbox {
         });
     }
 }
-
-jQuery(() => {
-    try {
-        if (ZINDEX) {
-            ZindexSandbox.getInstance().setup();
-        }
-    } catch (error) {
-        
-    }
-});

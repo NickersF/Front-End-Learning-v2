@@ -1,6 +1,4 @@
-declare var DRAGDROP: Boolean;
-
-export default class DragDrop {
+export class DragDrop {
 
     private static _instance: DragDrop;
 
@@ -100,13 +98,3 @@ export default class DragDrop {
     // }
     
 }
-
-jQuery(() => {
-    try {
-        if (DRAGDROP) {
-            DragDrop.getInstance().setup();
-        }
-    } catch (error) {
-
-    }
-});

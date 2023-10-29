@@ -1,6 +1,4 @@
-declare var RADIALMENU: Boolean;
-
-export default class RadialMenuComponent {
+export class RadialMenuComponent {
 
     private static _instance: RadialMenuComponent;
 
@@ -23,13 +21,3 @@ export default class RadialMenuComponent {
         });
     }
 }
-
-jQuery(() => {
-    try {
-        if (RADIALMENU) {
-            RadialMenuComponent.getInstance().setup();
-        }
-    } catch (error) {
-        
-    }
-});
