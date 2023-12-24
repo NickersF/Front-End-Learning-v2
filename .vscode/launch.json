@@ -21,6 +21,24 @@
             ]
         },
         {
+            "type": "firefox",
+            "name": "Firefox Dev",
+            "request": "launch",
+            "url": "http://localhost:8080/dist",
+            "webRoot": "${workspaceFolder}/src/ts",
+            "skipFiles": [
+                "<node_internals>/**",
+                "${workspaceFolder}/node_modules/**/*.js",
+                "**/jquery*.min.js"
+            ],
+            "pathMappings": [
+                {
+                    "url": "webpack://",
+                    "path": "${workspaceFolder}/src/ts"
+                }
+            ]
+        },
+        {
             "type": "msedge",
             "request": "launch",
             "name": "Edge Debug (Live Server)",
@@ -34,7 +52,7 @@
             "runtimeArgs": [
                 "--remote-debugging-port=9222"
             ],
-            "url": "${workspaceFolder}/dist/index.html", // Provide your project's url to finish configuring
+            "url": "${workspaceFolder}/dist/index.html",
             "presentation": {
                 "hidden": true
             }
@@ -47,7 +65,7 @@
                 "--headless",
                 "--remote-debugging-port=9222"
             ],
-            "url": "${workspaceFolder}/dist/index.html", // Provide your project's url to finish configuring
+            "url": "${workspaceFolder}/dist/index.html",
             "presentation": {
                 "hidden": true
             }
@@ -56,7 +74,7 @@
             "type": "vscode-edge-devtools.debug",
             "name": "Open Edge DevTools",
             "request": "attach",
-            "url": "${workspaceFolder}/dist/index.html", // Provide your project's url to finish configuring
+            "url": "${workspaceFolder}/dist/index.html",
             "presentation": {
                 "hidden": true
             }
