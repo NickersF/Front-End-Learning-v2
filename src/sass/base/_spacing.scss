@@ -2,6 +2,10 @@ html, body {
     height: 100%;
 }
 
+.height-100 {
+    height: 100%;
+}
+
 @mixin set-margins($name, $left : 0, $top: 0, $right: 0, $bottom: 0) {
     .elment-margin-#{$name} {
         margin-left: $left;
