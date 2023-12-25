@@ -26,6 +26,10 @@ class Main<T> {
         if (currentPath.includes("index")) {
             let indexController = new IndexController();
         }
+
+        if(currentPath.includes("lay_ex2")) {
+            console.log(currentPath);
+        }
     }
 }
 
