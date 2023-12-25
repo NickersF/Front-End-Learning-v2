@@ -15,7 +15,8 @@
 
 @use "./comp-list-system";
 
-@use "./lay-zindex";
+@use "./_layouts/lay-header-sidebar-left";
+@use "./_layouts/lay-zindex";
 
 @use "./nav-animated-icons";
 @use "./nav-radial-menu";

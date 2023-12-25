@@ -1,0 +1,34 @@
+.lay-ex1-root-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.lay-ex1-header {
+    background-color: #e897d9;
+}
+
+.lay-ex1-main-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.lay-ex1-main-row {
+    display: flex;
+    flex-grow: 1;
+}
+
+.lay-ex1-sidebar {
+    flex-grow: 1;
+    background-color: #e2c8a0;
+}
+
+.lay-ex1-main-content {
+    flex-grow: 4;
+    background-color: #acebce;
+}
+
+.lay-ex1-footer {
+    background-color: #dbc5d8;
+}
