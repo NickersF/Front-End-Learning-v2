@@ -1,5 +1,6 @@
 import { IndexController } from ".";
 import { Application } from "./application";
+import { MainLayoutEx1 } from "./layouts/lay-ex1";
 
 // Main class
 class Main<T> {
@@ -24,7 +25,13 @@ class Main<T> {
 
     public dispatchModuleLoad(currentPath: string): void {
         if (currentPath.includes("index")) {
+            console.log(currentPath);
             let indexController = new IndexController();
+        }
+
+        if (currentPath.includes("lay_ex1")) {
+            console.log(currentPath);
+            let mainLayoutEx1 = new MainLayoutEx1();
         }
 
         if(currentPath.includes("lay_ex2")) {

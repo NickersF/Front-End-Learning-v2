@@ -1,3 +1,10 @@
+/* 
+Author: Nicholas Fazzolari
+Date: 12/26/2023
+Description:
+Core CSS that produces a classic header/main/footer layout
+where the main has a sidebar, and both scroll in the main container.
+*/
 .lay-ex1-root-container {
     height: 100vh;
     display: flex;
@@ -11,7 +18,7 @@
 }
 
 .lay-ex1-sidebar {
-    width: 200px;
+    width: 232px;
     background-color: #dfdfdf;
     overflow: auto;
     padding: 1rem;
@@ -30,3 +37,5 @@
     text-align: center;
     padding: 1rem;
 }
+
+// Add some dimension labels
