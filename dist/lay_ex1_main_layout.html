@@ -15,32 +15,32 @@
 <body>
     <div id="MainLayout_Root" class="lay-ex1-root-container">
         <div id="MainLayout_Header" class="lay-ex1-header">
-            <h4>Header</h4>
+            <h4 class="poppins">Header</h4>
         </div>
         <div id="MainLayout_Container" class="lay-ex1-main-container">
             <div id="MainLayout_Sidebar" class="lay-ex1-sidebar">
-                <h4>Sidebar</h4>
-                <div id="MainLayout_DevControl_Sidebar">
-                    <p><span>Width: </span><span></span></p>
-                    <p><span>Height: </span><span></span></p>
-                    <label></label>
-                    <input type="range">
+                <h4 class="poppins">Sidebar</h4>
+                <div id="DevControl_Sidebar">
+                    <div><span>Width: </span><span id="DevControl_Sidebar_WidthLabel"></span></div>
+                    <div><span>Height: </span><span id="DevControl_Sidebar_HeightLabel"></span></div>
+                    <div><label for="DevControl_Sidebar_HeightRangeInput">Set sidebar height</label></div>
+                    <div><input id="DevControl_Sidebar_HeightRangeInput" type="range" min="0" max="1200" title="Scrub to change sidebar inner height."></div>
                 </div>
                 <div id="MainLayout_Sidebar_Height_Setter"></div>
             </div>
             <div id="MainLayout_Content" class="lay-ex1-content">
-                <h4>Content</h4>
-                <div id="MainLayout_DevControl_Content">
-                    <p><span>Width: </span><span></span></p>
-                    <p><span>Height: </span><span></span></p>
-                    <label></label>
-                    <input type="range">
+                <h4 class="poppins">Content</h4>
+                <div id="DevControl_Content">
+                    <div><span>Width: </span><span id="DevControl_Content_WidthLabel"></span></div>
+                    <div><span>Height: </span><span id="DevControl_Content_HeightLabel"></span></div>
+                    <div><label for="DevControl_Content_HeightRangeInput">Set content height</label></div>
+                    <div><input id="DevControl_Content_HeightRangeInput" type="range" min="0" max="1200" title="Scrub to change main content inner height."></div>
                 </div>
                 <div id="MainLayout_Content_Height_Setter"></div>
             </div>
         </div>
         <div id="MainLayout_Footer" class="lay-ex1-footer">
-            <h4>Footer</h4>
+            <h4 class="poppins">Footer</h4>
         </div>
     </div>
 
