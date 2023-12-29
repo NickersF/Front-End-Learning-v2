@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/jpg" href="./img/Favicon_v2.png" />
+    <title>Front End Starter Template</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div id="MainLayout_Root" class="lay-ex1-root-container">
+        <div id="MainLayout_Header" class="lay-ex1-header">
+            <h4 class="poppins">Header</h4>
+        </div>
+        <div id="MainLayout_Container" class="lay-ex1-main-container">
+            <div id="MainLayout_Sidebar" class="lay-ex1-sidebar">
+                <h4 class="poppins">Sidebar</h4>
+                <div id="DevControl_Sidebar">
+                    <div><span>Width: </span><span id="DevControl_Sidebar_WidthLabel"></span></div>
+                    <div><span>Height: </span><span id="DevControl_Sidebar_HeightLabel"></span></div>
+                    <div><label for="DevControl_Sidebar_HeightRangeInput">Set sidebar height</label></div>
+                    <div><input id="DevControl_Sidebar_HeightRangeInput" type="range" min="0" max="1600" title="Scrub to change sidebar inner height."></div>
+                </div>
+                <div id="MainLayout_Sidebar_Height_Setter" class="dev-height-setter"></div>
+            </div>
+            <div id="MainLayout_Content" class="lay-ex1-content">
+                <h4 class="poppins">Content</h4>
+                <div id="DevControl_Content">
+                    <div><span>Width: </span><span id="DevControl_Content_WidthLabel"></span></div>
+                    <div><span>Height: </span><span id="DevControl_Content_HeightLabel"></span></div>
+                    <div><label for="DevControl_Content_HeightRangeInput">Set content height</label></div>
+                    <div><input id="DevControl_Content_HeightRangeInput" type="range" min="0" max="1600" title="Scrub to change main content inner height."></div>
+                </div>
+                <div id="MainLayout_Content_Height_Setter" class="dev-height-setter"></div>
+            </div>
+        </div>
+        <div id="MainLayout_Footer" class="lay-ex1-footer">
+            <h4 class="poppins">Footer</h4>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

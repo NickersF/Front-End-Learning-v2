@@ -1,9 +1,46 @@
-console.log("Hello world!");
+import { IndexController } from ".";
+import { Application } from "./application";
+import { MainLayoutEx1 } from "./layouts/lay-ex1";
 
-let currentPage = window.location.pathname;
+// Main class
+class Main<T> {
+    public app: T; // Run an additional application
 
-console.log(currentPage);
+    constructor(application?: new () => T) {
+        if (application !== undefined) {
+            this.app = new application();
+        }
 
-if (currentPage.includes("index")) {
-    console.log(currentPage);
+        return;
+    }
+
+    // Main entry point
+    public start(): void {
+        console.log("Starting the application...");
+        //console.log(this);
+        let currentPath = window.location.pathname;
+
+        this.dispatchModuleLoad(currentPath)
+    }
+
+    public dispatchModuleLoad(currentPath: string): void {
+        if (currentPath.includes("index")) {
+            let indexController = new IndexController();
+        }
+
+        if (currentPath.includes("lay_ex1")) {
+            let mainLayoutEx1 = new MainLayoutEx1();
+            mainLayoutEx1.init();
+            mainLayoutEx1.initDevControls();
+        }
+
+        if(currentPath.includes("lay_ex2")) {
+            console.log(currentPath);
+        }
+    }
 }
+
+// Run the app - using an empty additional app here for testing
+let main = new Main(Application);
+
+main.start();

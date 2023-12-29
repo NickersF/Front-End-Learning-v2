@@ -4,7 +4,9 @@
 @use "base/spacing";
 @use "base/icon-styles";
 @use "base/buttons";
+@use "base/flex-containers";
 @use "styleguide";
+@use "./showcase";
 
 @use "./anim-basics";
 @use "./anim-seq-boxes";
@@ -13,7 +15,9 @@
 
 @use "./comp-list-system";
 
-@use "./lay-zindex";
+@use "./_layouts/lay-ex1-main-layout";
+@use "./_layouts/lay-ex2-row-resizeable";
+@use "./_layouts/lay-zindex";
 
 @use "./nav-animated-icons";
 @use "./nav-radial-menu";
