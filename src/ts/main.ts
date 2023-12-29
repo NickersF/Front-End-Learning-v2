@@ -31,6 +31,7 @@ class Main<T> {
         if (currentPath.includes("lay_ex1")) {
             let mainLayoutEx1 = new MainLayoutEx1();
             mainLayoutEx1.init();
+            mainLayoutEx1.initDevControls();
         }
 
         if(currentPath.includes("lay_ex2")) {
