@@ -1,13 +1,24 @@
 .lay-ex2-root-container {
     height: 100%;
+    position: relative;
+}
+
+.lay-ex2-resizeable {
+    width: 100%;
+    height: 50%;
+    min-height: 32px;
+    border: 1px solid #464646;
+    overflow: hidden;
 }
 
 .lay-ex2-top-row {
-    height: 50%;
-    background-color: rgb(238, 190, 152);
+    resize: vertical;
+    overflow: auto;
+    background-color: #E6EEA0;
 }
 
 .lay-ex2-bottom-row {
-    height: 50%;
-    background-color: rgb(129, 205, 235);
+    resize: vertical;
+    overflow: auto;
+    background-color: #AEFFBA;
 }

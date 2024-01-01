@@ -1,6 +1,7 @@
 import { IndexController } from ".";
 import { Application } from "./application";
 import { MainLayoutEx1 } from "./layouts/lay-ex1";
+import {ResizeableContainerEx2} from "./layouts/lay-ex2";
 
 // Main class
 class Main<T> {
@@ -35,7 +36,8 @@ class Main<T> {
         }
 
         if(currentPath.includes("lay_ex2")) {
-            console.log(currentPath);
+            let resizeableContainerEx2 = new ResizeableContainerEx2();
+            resizeableContainerEx2.init();
         }
     }
 }
