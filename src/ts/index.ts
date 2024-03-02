@@ -3,6 +3,13 @@ export class IndexController {
 
     constructor() {
         this._root = $("body");
+    }
+
+    public printRoot(): void {
+        let a = 1;
+        let b = 2;
+        let sum = a + b;
+
         console.log(this._root);
     }
 }

@@ -18,7 +18,6 @@ class Main<T> {
     // Main entry point
     public start(): void {
         console.log("Starting the application...");
-        //console.log(this);
         let currentPath = window.location.pathname;
 
         this.dispatchModuleLoad(currentPath)
@@ -27,6 +26,7 @@ class Main<T> {
     public dispatchModuleLoad(currentPath: string): void {
         if (currentPath.includes("index")) {
             let indexController = new IndexController();
+            indexController.printRoot();
         }
 
         if (currentPath.includes("lay_ex1")) {
