@@ -2,6 +2,7 @@ export class Application {
     public name: string;
 
     constructor() {
+        this.init("FrontEndLearning");
     }
 
     init(name: string) {
