@@ -2,6 +2,7 @@ import { IndexController } from ".";
 import { Application } from "./application";
 import { MainLayoutEx1 } from "./layouts/lay-ex1";
 import {ResizeableContainerEx2} from "./layouts/lay-ex2";
+import {CanvasApp} from "./canvas/canvas-app";
 
 // Main class
 class Main<T> {
@@ -26,7 +27,6 @@ class Main<T> {
     public dispatchModuleLoad(currentPath: string): void {
         if (currentPath.includes("index")) {
             let indexController = new IndexController();
-            indexController.printRoot();
         }
 
         if (currentPath.includes("lay_ex1")) {
@@ -35,10 +35,15 @@ class Main<T> {
             mainLayoutEx1.initDevControls();
         }
 
-        if(currentPath.includes("lay_ex2")) {
+        if (currentPath.includes("lay_ex2")) {
             let resizeableContainerEx2 = new ResizeableContainerEx2();
             resizeableContainerEx2.init();
         }
+
+        if (currentPath.includes("canvas_basics")) {
+             let canvasAppController = new CanvasApp("CanvasEl");
+        }
+
     }
 }
 
