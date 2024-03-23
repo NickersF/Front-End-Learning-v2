@@ -1,6 +1,6 @@
-import { IndexController } from ".";
-import { Application } from "./application";
-import { MainLayoutEx1 } from "./layouts/lay-ex1";
+import {IndexController} from ".";
+import {Application} from "./application";
+import {MainLayoutEx1} from "./layouts/lay-ex1";
 import {ResizeableContainerEx2} from "./layouts/lay-ex2";
 import {CanvasApp} from "./canvas/canvas-app";
 
@@ -41,9 +41,12 @@ class Main<T> {
         }
 
         if (currentPath.includes("canvas_basics")) {
-             let canvasAppController = new CanvasApp("CanvasEl");
-             canvasAppController.drawRect();
-             canvasAppController.drawTri();
+            let canvasAppController = new CanvasApp("CanvasEl");
+
+            canvasAppController.addRectangle({ x: 32, y: 32, width: 64, height: 64 });
+            canvasAppController.addRectangle({ x: 128, y: 128, width: 64, height: 64 });
+            canvasAppController.drawRectangles();
+            //canvasAppController.drawTri();
         }
 
     }
