@@ -42,6 +42,8 @@ class Main<T> {
 
         if (currentPath.includes("canvas_basics")) {
              let canvasAppController = new CanvasApp("CanvasEl");
+             canvasAppController.drawRect();
+             canvasAppController.drawTri();
         }
 
     }
