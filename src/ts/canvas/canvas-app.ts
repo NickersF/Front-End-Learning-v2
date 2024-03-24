@@ -43,6 +43,7 @@ export class CanvasApp {
 
     public drawRectangles(): void {
         this._clearCanvas();
+        this.drawGrid(16);
         this._rectangleBuffer.forEach(rect => {
             this._ctx.fillRect(rect.x, rect.y, rect.width, rect.height);
         });
@@ -94,6 +95,91 @@ export class CanvasApp {
         this._ctx.clearRect(0, 0, this._canvasEl.width, this._canvasEl.height);
     }
 
+    public drawLines(): void {
+        let canvasWidth = this._canvasEl.width;
+        let canvasHeight = this._canvasEl.height;
+
+        this._ctx.beginPath();
+        this._ctx.moveTo(16, 0);
+        this._ctx.lineTo(16, canvasHeight);
+        this._ctx.closePath();
+        this._ctx.stroke();
+
+        this._ctx.beginPath();
+        this._ctx.moveTo(32, 0);
+        this._ctx.lineTo(32, canvasHeight);
+        this._ctx.closePath();
+        this._ctx.stroke();
+
+        this._ctx.beginPath();
+        this._ctx.moveTo(48, 0);
+        this._ctx.lineTo(48, canvasHeight);
+        this._ctx.closePath();
+        this._ctx.stroke();
+    }
+
+    public drawGrid(step: number): void {
+        let canvasWidth = this._canvasEl.width;
+        let canvasHeight = this._canvasEl.height;
+        let gridStep: number = step;
+        let gridFillX: number = 0;
+        let gridFillY: number = 0;
+
+        while (gridFillX < canvasWidth && gridFillY < canvasHeight) {
+            this._ctx.beginPath();
+            this._ctx.moveTo(gridFillX, 0);
+            this._ctx.lineTo(gridFillX, canvasHeight);
+            this._ctx.closePath();
+            this._ctx.stroke();
+
+            gridFillX += gridStep;
+
+            this._ctx.beginPath();
+            this._ctx.moveTo(0, gridFillY);
+            this._ctx.lineTo(canvasWidth, gridFillY);
+            this._ctx.closePath();
+            this._ctx.stroke();
+
+            gridFillY += gridStep;
+        }
+
+        // this._ctx.beginPath();
+        // this._ctx.moveTo(16, 0);
+        // this._ctx.lineTo(16, canvasHeight);
+        // this._ctx.closePath();
+        // this._ctx.stroke();
+        //
+        // this._ctx.beginPath();
+        // this._ctx.moveTo(32, 0);
+        // this._ctx.lineTo(32, canvasHeight);
+        // this._ctx.closePath();
+        // this._ctx.stroke();
+        //
+        // this._ctx.beginPath();
+        // this._ctx.moveTo(48, 0);
+        // this._ctx.lineTo(48, canvasHeight);
+        // this._ctx.closePath();
+        // this._ctx.stroke();
+
+        // this._ctx.beginPath();
+        // this._ctx.moveTo(0, 16);
+        // this._ctx.lineTo(canvasWidth, 16);
+        // this._ctx.closePath();
+        // this._ctx.stroke();
+        //
+        // this._ctx.beginPath();
+        // this._ctx.moveTo(0, 32);
+        // this._ctx.lineTo(canvasWidth, 32);
+        // this._ctx.closePath();
+        // this._ctx.stroke();
+        //
+        // this._ctx.beginPath();
+        // this._ctx.moveTo(0, 48);
+        // this._ctx.lineTo(canvasWidth, 48);
+        // this._ctx.closePath();
+        // this._ctx.stroke();
+    }
+
     public drawTri(): void {
         let triangle: Triangle = {
             vertexA: { x: 0, y: 32 },
@@ -107,5 +193,9 @@ export class CanvasApp {
         this._ctx.lineTo(triangle.vertexC.x, triangle.vertexC.y);
         this._ctx.closePath();
         this._ctx.stroke();
+    }
+
+    public drawArc(): void {
+        
     }
 }

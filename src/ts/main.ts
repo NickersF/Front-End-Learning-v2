@@ -46,6 +46,8 @@ class Main<T> {
             canvasAppController.addRectangle({ x: 32, y: 32, width: 64, height: 64 });
             canvasAppController.addRectangle({ x: 128, y: 128, width: 64, height: 64 });
             canvasAppController.drawRectangles();
+            //canvasAppController.drawLines();
+            //canvasAppController.drawGrid(16);
             //canvasAppController.drawTri();
         }
 
